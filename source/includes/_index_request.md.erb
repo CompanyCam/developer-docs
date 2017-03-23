@@ -1,18 +1,8 @@
 ## List all <%= t(".resource_plural", scope: resource) %>
-<% unless t('.gecko.unavailable', scope: resource) == true %>
-```ruby
-require 'gecko-ruby'
-gecko = Gecko::Client.new(<OAUTH_ID>, <OAUTH_SECRET>)
-access_token = OAuth2::AccessToken.new(gecko.oauth_client, <ACCESS_TOKEN>)
-gecko.access_token = access_token
-
-gecko.<%= t(".resource_klass", scope: resource) %>.where(limit: 25, status: 'active')
-```
-<% end %>
 
 ```shell
 curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
-https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>/
+https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/
 ```
 
 ```json
@@ -46,4 +36,4 @@ Returns a list of <%= t(".resource_plural", scope: resource) %> you’ve previou
 <% end %>
 
 ### HTTP Request:
-`GET  https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>`
+`GET  https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>`

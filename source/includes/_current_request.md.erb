@@ -1,16 +1,8 @@
 ## Get current <%= t(".resource_name", scope: resource) %>
 
-```ruby
-require 'gecko-ruby'
-gecko = Gecko::Client.new(<OAUTH_ID>, <OAUTH_SECRET>)
-access_token = OAuth2::AccessToken.new(gecko.oauth_client, <ACCESS_TOKEN>)
-gecko.access_token = access_token
-gecko.<%= t(".resource_klass", scope: resource) %>.current
-```
-
 ```shell
 curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
-https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>/current
+https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/current
 ```
 
 ```json
@@ -22,5 +14,4 @@ https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>/current
 Retrieves the details of the current <%= t(".resource_name", scope: resource) %>.
 
 ### HTTP Request
-`GET https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>/current`
-
+`GET https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>`

@@ -19,7 +19,9 @@
 **<%= value[:name] %>**<%= " <span class='private'>private</span>" if value[:private] %> <%= " <span class='deprecated'>deprecated</span>" if value[:deprecated] %> | <%= value[:type] %> | <%= value[:description] %> | <%= value[:readonly] %>
 <% end %>
 
-<%= partial "includes/index_request", locals: { resource: resource, json_all: json_all }  %>
+<% unless t(".disable_index", scope: resource) == true %>
+  <%= partial "includes/index_request", locals: { resource: resource, json_all: json_all }  %>
+<% end %>
 
 <% unless t(".disable_create", scope: resource) == true %>
   <%= partial "includes/create_request", locals: { resource: resource, json_single: json_single } %>

@@ -2,18 +2,18 @@
 
 The refresh token is a unique key used to request for a new access token whenever
 the current access token becomes expired. In order to refresh an access token, user must make a POST request to
-`https://api.tradegecko.com/oauth/token` with the `client_id`,
+`https://api.companycam.com/v2/oauth/token` with the `client_id`,
 `client_secret`, `redirect_uri`, `refresh_token` and `grant_type` as parameters.
 
 `refresh_token` must match the refresh token returned by the
 authorization endpoint and `grant_type` must be set to `refresh_token`.
 
 ```shell
-curl -H "Content-type: application/json" -X POST https://api.tradegecko.com/oauth/token -d '{"client_id": "9eb02720054", "client_secret": "b1d41094b83", "redirect_uri": "http://my.application.com/auth/callback", "refresh_token": "9582f8a45255", "grant_type": "refresh_token"}'
+curl -H "Content-type: application/json" -X POST https://api.companycam.com/v2/oauth/token -d '{"client_id": "9eb02720054", "client_secret": "b1d41094b83", "redirect_uri": "http://my.application.com/auth/callback", "refresh_token": "9582f8a45255", "grant_type": "refresh_token"}'
 ```
 
 ```ruby
-  
+
 ```
 
 ```json

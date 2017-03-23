@@ -51,7 +51,7 @@ en:
   end
 
   def site_path
-    ENV["TRADEGECKO_API_URL"] || "https://api.tradegecko.com"
+    ENV["TRADEGECKO_API_URL"] || ""
   end
 
   def json

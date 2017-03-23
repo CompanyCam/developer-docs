@@ -1,18 +1,8 @@
 ## Create a new <%= t(".resource_name", scope: resource) %>
 
-<% unless t('.gecko.unavailable', scope: resource) == true %>
-```ruby
-require 'gecko-ruby'
-gecko = Gecko::Client.new(<OAUTH_ID>, <OAUTH_SECRET>)
-access_token = OAuth2::AccessToken.new(gecko.oauth_client, <ACCESS_TOKEN>)
-gecko.access_token = access_token
-gecko.<%= t(".resource_klass", scope: resource) %>.create(<%= t('.gecko.create', scope: resource) %>)
-```
-<% end %>
-
 ```shell
 curl -X POST -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
-https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>/ -d '{"<%= t(".resource_name", scope: resource) %>":<%= t('.gecko.create', scope: resource).to_json %>'}
+https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/ -d '{"<%= t(".resource_name", scope: resource) %>":<%= t('.gecko.create', scope: resource).to_json %>'}
 ```
 
 ```json
@@ -58,4 +48,4 @@ This endpoint also accepts embedded <%= t(".child", scope: resource) %>s.
 <% end %>
 <% end %>
 ### HTTP Request
-`POST https://api.tradegecko.com/<%= t(".resource_plural", scope: resource) %>/`
+`POST https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/`

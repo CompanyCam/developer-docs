@@ -19,5 +19,5 @@ and the token request endpoint.
 
 These endpoints are:
 
-- **https://api.tradegecko.com/oauth/authorize**
-- **https://api.tradegecko.com/oauth/token**
+- **/oauth/authorize**
+- **/oauth/token**
