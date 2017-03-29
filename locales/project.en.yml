@@ -89,17 +89,17 @@ en:
       },
       address: {
         name: "address",
-        type: "Address",
+        type: "[Address](/#the-address-object)",
         description: "The physical address of the Project."
       },
       coordinates: {
         name: "coordinates",
-        type: "Coordinate",
+        type: "[Coordinate](/#the-coordinate-object)",
         description: "The latitude and longitude of the Project."
       },
       feature_image: {
         name: "feature_image",
-        type: "ImageSet",
+        type: "Array[[ImageURI](/#the-imageuri-object)]",
         description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`.",
         readonly: true
       },
@@ -116,7 +116,7 @@ en:
       },
       geofence: {
         name: "geofence",
-        type: "Array[Coordinate]",
+        type: "Array[[Coordinate](/#the-coordinate-object)]",
         description: "The Project's geofence coordinates that form an enclosing perimeter."
       },
       created_at: {

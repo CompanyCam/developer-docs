@@ -54,13 +54,13 @@ en:
       },
       address: {
         name: "address",
-        type: "Address",
+        type: "[Address](/#the-address-object)",
         description: "The address of the company",
         readonly: true
       },
       logo: {
         name: "logo",
-        type: "ImageSet",
+        type: "Array[[ImageURI](/#the-imageuri-object)]",
         description: "A list of images for the different variants of the logo",
         readonly: true
       }

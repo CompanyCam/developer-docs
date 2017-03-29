@@ -18,7 +18,7 @@ en:
       },
       permissions: {
         name: "permissions",
-        type: "Array[Permission]",
+        type: "Array[[Permission](/#the-permission-object)]",
         description: "A list of the permissions belonging to the Role"
       }
     }

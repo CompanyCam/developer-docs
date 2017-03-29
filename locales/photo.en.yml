@@ -82,12 +82,12 @@ en:
       },
       coordinates: {
         name: "coordinates",
-        type: "Coordinate",
+        type: "[Coordinate](/#the-coordinate-object)",
         description: "The latitude and longitude of the Project."
       },
       uris: {
         name: "feature_image",
-        type: "ImageSet",
+        type: "Array[[ImageURI](/#the-permission-object)]",
         description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`.",
         readonly: true
       },

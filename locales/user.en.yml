@@ -103,7 +103,7 @@ en:
       },
       profile_image: {
         name: "profile_image",
-        type: "ImageSet",
+        type: "Array[[ImageURI](/#the-imageuri-object)]",
         description: "A list of images for the different variants of the User's image. Will have entries for `original`, `web`, and `thumbnail`.",
         readonly: true
       },
@@ -115,7 +115,7 @@ en:
       },
       role: {
         name: "role",
-        type: "Role",
+        type: "[Role](/#the-role-object)",
         description: "The User's role and permissions",
         readonly: true
       },
