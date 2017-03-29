@@ -1,0 +1,7 @@
+## The <%= t(".type_klass", scope: type) %> object
+
+| Attribute                            | Type          | Description  |
+| ------------------------------------ | ------------- | ------------ |
+<% t(".attributes", scope: type).reject{ |k,v| v[:private] }.each_pair do |key, value| %>
+**<%= value[:name] %>**<%= " <span class='private'>private</span>" if value[:private] %> <%= " <span class='deprecated'>deprecated</span>" if value[:deprecated] %> | <%= value[:type] %> | <%= value[:description] %> |
+<% end %>

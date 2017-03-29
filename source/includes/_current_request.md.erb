@@ -6,9 +6,7 @@ https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/curr
 ```
 
 ```json
-{
-  "<%= t(".resource_name", scope: resource) %>": <%= json_single %>
-}
+<%= json_single %>
 ```
 
 Retrieves the details of the current <%= t(".resource_name", scope: resource) %>.

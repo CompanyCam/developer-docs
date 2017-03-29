@@ -1,0 +1,24 @@
+---
+en:
+  role:
+    type_article: "a"
+    type_klass: "Role"
+    type_name: "role"
+    type_plural: "roles"
+    attributes: {
+      id: {
+        name: "id",
+        type: "Interger",
+        description: "The id of the Role"
+      },
+      name: {
+        name: "name",
+        type: "String",
+        description: "The name of the Role"
+      },
+      permissions: {
+        name: "permissions",
+        type: "Array[Permission]",
+        description: "A list of the permissions belonging to the Role"
+      }
+    }

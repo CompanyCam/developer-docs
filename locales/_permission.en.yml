@@ -1,0 +1,19 @@
+---
+en:
+  permission:
+    type_article: "a"
+    type_klass: "Permission"
+    type_name: "permission"
+    type_plural: "permissions"
+    attributes: {
+      title: {
+        name: "title",
+        type: "String",
+        description: "The title of the Permission"
+      },
+      value: {
+        name: "value",
+        type: "Integer",
+        description: "The value of the Permission that corresponds to the [Permission enum](/#permissions-enum)"
+      }
+    }

@@ -1,0 +1,19 @@
+---
+en:
+  coordinate:
+    type_article: "a"
+    type_klass: "Coordinate"
+    type_name: "coordinate"
+    type_plural: "coordinates"
+    attributes: {
+      lat: {
+        name: "lat",
+        type: "Float",
+        description: "The latitude of the coordinate"
+      },
+      lon: {
+        name: "lon",
+        type: "Float",
+        description: "The longitude of the coordinate"
+      }
+    }

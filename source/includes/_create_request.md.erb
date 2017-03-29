@@ -6,9 +6,7 @@ https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/ -d 
 ```
 
 ```json
-{
-  "<%= t(".resource_name", scope: resource) %>": <%= json_single %>
-}
+<%= json_single %>
 ```
 
 Creates a new <%= t(".resource_name", scope: resource) %> object.

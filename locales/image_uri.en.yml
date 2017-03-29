@@ -1,0 +1,19 @@
+---
+en:
+  image_uri:
+    type_article: "a"
+    type_klass: "ImageURI"
+    type_name: "image_uri"
+    type_plural: "image_uris"
+    attributes: {
+      type: {
+        name: "type",
+        type: "String",
+        description: "The type of the URI, for example `original` or `thumbnail`"
+      },
+      uri: {
+        name: "uri",
+        type: "String",
+        description: "The full URI of the photo"
+      }
+    }

@@ -15,8 +15,8 @@ curl -H "Content-type: application/json" -X POST https://api.companycam.com/v2/o
 ```
 
 The access token is a unique key used to make requests to the API. In
-order to get an access token, user must make a POST request to
-`https://api.companycam.com/v2oauth/token` with the `client_id`,
+order to get an access token, the user must make a POST request to
+`https://api.companycam.com/v2/oauth/token` with the `client_id`,
 `client_secret`, `redirect_uri`, `code` and `grant_type` as parameters.
 `code` must match the authorization code returned by the
 authorization endpoint and `grant_type` must be set to

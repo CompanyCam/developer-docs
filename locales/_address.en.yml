@@ -1,0 +1,39 @@
+---
+en:
+  address:
+    type_article: "a"
+    type_klass: "Address"
+    type_name: "address"
+    type_plural: "addresses"
+    attributes: {
+      street_address_1: {
+        name: "street_address_1",
+        type: "String",
+        description: "The first line of the street address. Normally this is the building or house number along with the street name."
+      },
+      street_address_2: {
+        name: "street_address_2",
+        type: "String",
+        description: "The second line of the street address. Normally this is the suite or apartment number."
+      },
+      city: {
+        name: "city",
+        type: "String",
+        description: "The city in which the item is located"
+      },
+      state: {
+        name: "state",
+        type: "String",
+        description: "The two character state identifier in which the item is located"
+      },
+      postal_code: {
+        name: "postal_code",
+        type: "String",
+        description: "The postal code in which the item is located"
+      },
+      country: {
+        name: "country",
+        type: "String",
+        description: "The short country identifier in which the item is located"
+      }
+    }

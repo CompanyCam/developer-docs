@@ -7,8 +7,7 @@ https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/1 -d
 
 > Response
 >
-> Returns 204 status when the <%= t(".resource_name", scope: resource) %> gets updated successfully.
-
+> Returns 200 status when the <%= t(".resource_name", scope: resource) %> gets updated successfully.
 
 Updates the specified <%= t(".resource_name", scope: resource) %> by setting the values of the parameters passed.
 
@@ -16,4 +15,4 @@ Any parameters not provided will be left unchanged.
 This request accepts the same arguments as the <%= t(".resource_name", scope: resource) %> creation call.
 
 ### HTTP Request
-`PUT https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/{RESOURCE_ID}`
+`PUT https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/{<%= t(".resource_plural", scope: resource) %>_id}`

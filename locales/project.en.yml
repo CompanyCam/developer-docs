@@ -1,0 +1,134 @@
+---
+en:
+  project:
+    current: true
+    resource_article: "a"
+    resource_klass: "Project"
+    resource_name: "project"
+    resource_plural: "projects"
+    parent: "company"
+    parent_article: "a"
+    parent_plural: "companies"
+    json: [
+      {
+        id: 1,
+        company_id: 1,
+        creator_id: 1,
+        status: "active",
+        name: "Psych Office",
+        address: {
+          street_address_1: "2756 O'Hara Lane",
+          street_address_2: "",
+          city: "Santa Barbara",
+          state: "CA",
+          postal_code: "93101",
+          country: "US"
+        },
+        coordinates: {
+          lat: 34.398307,
+          lon: -119.712367
+        },
+        feature_image: [
+          {
+            type: "original",
+            url: "https://static.companycam.com/VuS0rPvrnNA1490797262.jpg"
+          },
+          {
+            type: "web",
+            url: "https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg"
+          },
+          {
+            type: "thumbnail",
+            url: "https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg"
+          }
+        ],
+        slug: "QrL2XjgF8P2dN6MPDRdV2Q",
+        public: false,
+        geofence: null,
+        created_at: 1152230400,
+        updated_at: 1395792000
+      }
+    ]
+    gecko:
+      update: {
+        name: "Psych Business Office"
+      }
+      create: {
+
+      }
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "Integer",
+        description: "A unique identifier for the Project.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "Integer",
+        description: "A unique identifier for the Company the Project belongs to.",
+        readonly: true,
+      },
+      creator_id: {
+        name: "creator_id",
+        type: "Integer",
+        description: "The id of the User that created the Project",
+        readonly: true
+      },
+      status: {
+        name: "status",
+        type: "String",
+        description: "Indicates the status of the Project. It will be `active` or `deleted`",
+        readonly: true
+      },
+      name: {
+        name: "name",
+        type: "String",
+        description: "The name of the Project",
+      },
+      address: {
+        name: "address",
+        type: "Address",
+        description: "The physical address of the Project."
+      },
+      coordinates: {
+        name: "coordinates",
+        type: "Coordinate",
+        description: "The latitude and longitude of the Project."
+      },
+      feature_image: {
+        name: "feature_image",
+        type: "ImageSet",
+        description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`.",
+        readonly: true
+      },
+      slug: {
+        name: "slug",
+        type: "String",
+        description: "A unique identifier use the Project that is used to construct some public URLs.",
+        readonly: true
+      },
+      public: {
+        name: "public",
+        type: "Boolean",
+        description: "Indicates whether the Project's timeline and other public features are enabled."
+      },
+      geofence: {
+        name: "geofence",
+        type: "Array[Coordinate]",
+        description: "The Project's geofence coordinates that form an enclosing perimeter."
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Project was created",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Project was last updated",
+        readonly: true
+      }
+    }

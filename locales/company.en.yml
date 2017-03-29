@@ -9,32 +9,29 @@ en:
     disable_create: true
     disable_update: true
     disable_destroy: true
-    json: [
-      {
-        id: 1,
-        name: "CompanyCam",
-        active: true,
-        email: "hello@companycam.com",
-        address: {
-          street_address_1: "123 Main St.",
-          street_address_2: "Ste 100",
-          city: "Lincoln",
-          state: "NE",
-          postal_code: "68508",
-          country: "US"
+    json: [{
+      id: 1,
+      name: "Psych",
+      status: 'active',
+      address: {
+        street_address_1: "14970 Marine Drive",
+        street_address_2: "",
+        city: "Santa Barbara",
+        state: "CA",
+        postal_code: "93101",
+        country: "US"
+      },
+      logo: [
+        {
+          type: "original",
+          url: "https://static.companycam.com/xKN18Xv-mLI1484335643.jpg"
         },
-        logo: [
-          {
-            type: "original",
-            url: "https://static.companycam.com/xKN18Xv-mLI1484335643.jpg"
-          },
-          {
-            type: "thumbnail",
-            url: "https://static.companycam.com/xKN18Xv-mLI1484335643small.jpg"
-          }
-        ]
-      }
-    ]
+        {
+          type: "thumbnail",
+          url: "https://static.companycam.com/xKN18Xv-mLI1484335643small.jpg"
+        }
+      ]
+    }]
     gecko:
     attributes: {
       id: {
@@ -49,16 +46,10 @@ en:
         description: "The name of the company",
         readonly: true
       },
-      active: {
-        name: "active",
-        type: "Boolean",
-        description: "Indicates if the company is active and eligible to use the application",
-        readonly: true
-      },
-      email: {
-        name: "email",
+      status: {
+        name: "status",
         type: "String",
-        description: "The email address that created the account",
+        description: "Indicates the status of the Company. It will be one of `active`, `cancelled`, or `deleted`",
         readonly: true
       },
       address: {

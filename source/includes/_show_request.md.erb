@@ -6,9 +6,7 @@ https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/1
 ```
 
 ```json
-{
-  "<%= t(".resource_name", scope: resource) %>": <%= json_single %>
-}
+<%= json_single %>
 ```
 
 Retrieves the details of an existing <%= t(".resource_name", scope: resource) %>. You need only supply the unique <%= t(".resource_name", scope: resource) %> identifier that was returned upon <%= t(".resource_name", scope: resource) %> creation.

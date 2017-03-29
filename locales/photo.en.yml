@@ -1,0 +1,123 @@
+---
+en:
+  photo:
+    current: true
+    resource_article: "a"
+    resource_klass: "Photo"
+    resource_name: "photo"
+    resource_plural: "photos"
+    parent: "project"
+    parent_article: "a"
+    parent_plural: "projects"
+    json: [
+      {
+        id: 1,
+        company_id: 1,
+        creator_id: 1,
+        project_id: 1,
+        status: "active",
+        coordinates: {
+          lat: 34.398307,
+          lon: -119.712367
+        },
+        uris: [
+          {
+            type: "original",
+            url: "https://static.companycam.com/VuS0rPvrnNA1490797262.jpg"
+          },
+          {
+            type: "web",
+            url: "https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg"
+          },
+          {
+            type: "thumbnail",
+            url: "https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg"
+          }
+        ],
+        hash: "00ab337b7399151e5d4aa3bd4226e8dd",
+        internal: false,
+        captured_at: 1152230396,
+        created_at: 1152230608,
+        updated_at: 1152230400
+      }
+    ]
+    gecko:
+      update: {
+        internal: false
+      }
+      create: {
+
+      }
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "Integer",
+        description: "A unique identifier for the Photo.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "Integer",
+        description: "A unique identifier for the Company the Photo belongs to.",
+        readonly: true,
+      },
+      creator_id: {
+        name: "creator_id",
+        type: "Integer",
+        description: "The id of the User that took the Photo.",
+        readonly: true
+      },
+      project_id: {
+        name: "project_id",
+        type: "Integer",
+        description: "The id of the Project the Photo was taken at.",
+        readonly: true
+      },
+      status: {
+        name: "status",
+        type: "String",
+        description: "Indicates the status of the Project. It will be `active` or `deleted`",
+        readonly: true
+      },
+      coordinates: {
+        name: "coordinates",
+        type: "Coordinate",
+        description: "The latitude and longitude of the Project."
+      },
+      uris: {
+        name: "feature_image",
+        type: "ImageSet",
+        description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`.",
+        readonly: true
+      },
+      hash: {
+        name: "hash",
+        type: "String",
+        description: "The MD5 hash of the images contents.",
+        readonly: true
+      },
+      internal: {
+        name: "internal",
+        type: "Boolean",
+        description: "Indicates whether the Photo's is for internal use only and should not be used in marketing or other public materials."
+      },
+      captured_at: {
+        name: "captured_at",
+        type: "Integer",
+        description: "Timestamp when the Photo was taken by the User.",
+        readonly: true
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Photo was created on the server. This may differ from the `captured_at` field.",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Photo was last update.",
+        readonly: true
+      }
+    }
