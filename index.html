@@ -136,6 +136,7 @@ for existing known issues or <a href="https://github.com/CompanyCam/api-docs/iss
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
   -H <span class="s2">"Authorization: Bearer &lt;ACCESS_TOKEN&gt;"</span>
+  -H <span class="s2">"X-CompanyCam-User: &lt;USER_EMAIL&gt;"</span>
 </code></pre>
 
 <blockquote>
@@ -146,8 +147,15 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p><code class="prettyprint">Authorization: Bearer &lt;ACCESS_TOKEN&gt;</code></p>
 
+<p>When possible you should set the user&rsquo;s email address performing the action in your app in a header that looks like the following:
+<code class="prettyprint">X-CompanyCam-User: &lt;USER_EMAIL&gt;</code></p>
+
+<p>If the email address is not provided it will use the email address of the user that configured the integration.</p>
+
 <aside class="notice">
-You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key.
+<br />
+You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key. <br />
+You should replace <code>&lt;USER_EMAIL&gt;</code> with the user&rsquo;s email address.
 </aside>
 
 <h1 id="getting-started">Getting Started</h1>
@@ -253,14 +261,14 @@ is invoked. Using an expired refresh token would return this error.</p>
 </span></code></pre>
 
 <p><h2 id="making-an-api-call">Making an API call</h2>
-<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span> -H <span class="s2">&quot;X-CompanyCam-User: shawn@psych.com&quot;</span>
 https://api.companycam.com/v2 %&gt;/
 </code></pre></p>
 
 <p>The CompanyCam API is entirely JSON based. In order to make an authenticated call
 to the API, you must include your access token with the call.
 OAuth2 uses a BEARER token that is passed along in an Authorization
-header.</p>
+header. You should whenever possible set the <code class="prettyprint">X-CompanyCam-User</code> HTTP header to the email address of the user performing the action. This email must match the user&rsquo;s email address in CompanyCam. If the <code class="prettyprint">X-CompanyCam-User</code> header is not provided it will fallback to using the user that setup the integration.</p>
 
 <p><h2 id="pagination">Pagination</h2></p>
 
@@ -291,72 +299,77 @@ and &lsquo;page&rsquo; parameters on GET requests to index pages.</p>
 <tr>
 <td>Modify Users</td>
 <td>1</td>
-<td></td>
+<td>Can create and update users</td>
 </tr>
 <tr>
 <td>Delete Users</td>
 <td>2</td>
-<td></td>
+<td>Can delete users</td>
 </tr>
 <tr>
 <td>Modify Groups</td>
 <td>3</td>
-<td></td>
+<td>Can create and update groups</td>
 </tr>
 <tr>
 <td>Delete Groups</td>
 <td>4</td>
-<td></td>
+<td>Can delete groups</td>
 </tr>
 <tr>
 <td>Manage Billing</td>
 <td>5</td>
-<td></td>
+<td>Can view and update the company&rsquo;s billing information</td>
 </tr>
 <tr>
 <td>Access Reports</td>
 <td>6</td>
-<td></td>
+<td>Can create, update, and delete reports</td>
 </tr>
 <tr>
 <td>Delete Photos</td>
 <td>7</td>
-<td></td>
+<td>Can delete photos</td>
 </tr>
 <tr>
 <td>Move Photos</td>
 <td>8</td>
-<td></td>
+<td>Can move photos between projects</td>
 </tr>
 <tr>
 <td>Share Photos</td>
 <td>9</td>
-<td></td>
+<td>Can share photos by creating things like galleries or sharing timelines</td>
 </tr>
 <tr>
 <td>View Users Photos</td>
 <td>10</td>
-<td></td>
+<td>Can view a users photos if they are part of a project the user has participated in</td>
 </tr>
 <tr>
 <td>View Groups Photos</td>
 <td>11</td>
-<td></td>
+<td>Can view photos of users that are in groups user is a member of</td>
 </tr>
 <tr>
 <td>Access Mobile App</td>
 <td>12</td>
-<td></td>
+<td>Has access to the mobile app</td>
 </tr>
 <tr>
 <td>Modify Project</td>
 <td>13</td>
-<td></td>
+<td>Can create and update projects</td>
 </tr>
 <tr>
 <td>Delete Projects</td>
 <td>14</td>
-<td></td>
+<td>Can delete projects</td>
+</tr>
+<tr>
+<td>Browse User Photos</td>
+<td>15</td>
+<td>Can view and filter phots by a specific user</td>
 </tr>
 </tbody></table>
 
