@@ -53,6 +53,7 @@ for existing known issues or [create a new issue](https://github.com/CompanyCam/
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
   -H "Authorization: Bearer <ACCESS_TOKEN>"
+  -H "X-CompanyCam-User: <USER_EMAIL>"
 ```
 
 > Make sure to replace `<ACCESS_TOKEN>` with your API key.
@@ -61,8 +62,17 @@ CompanyCam expects for the API key to be included in all API requests to the ser
 
 `Authorization: Bearer <ACCESS_TOKEN>`
 
+When possible you should set the user's email address performing the action in your app in a header that looks like the following:
+`X-CompanyCam-User: <USER_EMAIL>`
+
+If the email address is not provided it will use the email address of the user that configured the integration.
+
+
 <aside class="notice">
-You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key.
+<br />
+You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key. <br />
+You should replace <code>&lt;USER_EMAIL&gt;</code> with the user's email address.
 </aside>
+
 <%= partial "includes/getting_started" %>
 <%= partial "includes/errors" %>
