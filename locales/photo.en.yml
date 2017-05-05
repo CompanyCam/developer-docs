@@ -14,6 +14,7 @@ en:
         id: 1,
         company_id: 1,
         creator_id: 1,
+        creator_type: "User",
         project_id: 1,
         status: "active",
         coordinates: {
@@ -66,6 +67,12 @@ en:
         name: "creator_id",
         type: "Integer",
         description: "The id of the User that took the Photo.",
+        readonly: true
+      },
+      creator_type: {
+        name: "creator_type",
+        type: "String",
+        description: "The type of entity that created this photo.",
         readonly: true
       },
       project_id: {
