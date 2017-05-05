@@ -15,6 +15,7 @@ en:
         company_id: 1,
         creator_id: 1,
         creator_type: "User",
+        creator_name: "Shawn Spencer",
         project_id: 1,
         status: "active",
         coordinates: {
@@ -73,6 +74,12 @@ en:
         name: "creator_type",
         type: "String",
         description: "The type of entity that created this photo.",
+        readonly: true
+      },
+      creator_name: {
+        name: "creator_name",
+        type: "String",
+        description: "The display name of the entity that created the photo.",
         readonly: true
       },
       project_id: {
