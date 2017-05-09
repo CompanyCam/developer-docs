@@ -14,6 +14,7 @@ en:
         id: 1,
         company_id: 1,
         creator_id: 1,
+        creator_type: "User",
         status: "active",
         name: "Psych Office",
         address: {
@@ -73,7 +74,13 @@ en:
       creator_id: {
         name: "creator_id",
         type: "Integer",
-        description: "The id of the User that created the Project",
+        description: "The id of the entity that created the Project",
+        readonly: true
+      },
+      creator_type: {
+        name: "creator_type",
+        type: "String",
+        description: "The type of the entity that created the Project",
         readonly: true
       },
       status: {
