@@ -15,6 +15,7 @@ en:
         company_id: 1,
         creator_id: 1,
         creator_type: "User",
+        creator_name: "Shawn Spencer",
         status: "active",
         name: "Psych Office",
         address: {
@@ -81,6 +82,12 @@ en:
         name: "creator_type",
         type: "String",
         description: "The type of the entity that created the Project",
+        readonly: true
+      },
+      creator_name: {
+        name: "creator_name",
+        type: "String",
+        description: "The display name of the entity that created the Project",
         readonly: true
       },
       status: {

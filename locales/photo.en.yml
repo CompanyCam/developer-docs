@@ -100,8 +100,8 @@ en:
         description: "The latitude and longitude of the Project."
       },
       uris: {
-        name: "feature_image",
-        type: "Array[[ImageURI](/#the-permission-object)]",
+        name: "uris",
+        type: "Array[[ImageURI](/#the-imageuri-object)]",
         description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`.",
         readonly: true
       },
