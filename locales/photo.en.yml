@@ -7,6 +7,7 @@ en:
     resource_name: "photo"
     resource_plural: "photos"
     parent: "project"
+    nested: true
     parent_article: "a"
     parent_plural: "projects"
     json: [
@@ -48,7 +49,12 @@ en:
         internal: false
       }
       create: {
-
+        uri: 'https://your-image-url.jpg',
+        coordinates: {
+          lat: 34.398307,
+          lon: -119.712367
+        },
+        captured_at: 1152230396
       }
 
     attributes: {
@@ -97,7 +103,9 @@ en:
       coordinates: {
         name: "coordinates",
         type: "[Coordinate](/#the-coordinate-object)",
-        description: "The latitude and longitude of the Project."
+        description: "The latitude and longitude of the Project.",
+        creatable: true,
+        required: true
       },
       uris: {
         name: "uris",
@@ -116,11 +124,22 @@ en:
         type: "Boolean",
         description: "Indicates whether the Photo's is for internal use only and should not be used in marketing or other public materials."
       },
+      uri: {
+        name: "uri",
+        type: "String",
+        description: "The URI to the photo you wish to upload.",
+        readonly: true,
+        private: true,
+        creatable: true,
+        required: true
+      },
       captured_at: {
         name: "captured_at",
         type: "Integer",
         description: "Timestamp when the Photo was taken by the User.",
-        readonly: true
+        readonly: true,
+        creatable: true,
+        required: true
       },
       created_at: {
         name: "created_at",

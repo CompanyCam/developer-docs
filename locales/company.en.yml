@@ -5,6 +5,7 @@ en:
     resource_klass: "Company"
     resource_name: "company"
     resource_plural: "companies"
+    nested: false
     disable_index: true
     disable_create: true
     disable_update: true

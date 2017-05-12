@@ -1,8 +1,13 @@
 ## Create a new <%= t(".resource_name", scope: resource) %>
 
 ```shell
+<% if t(".nested", scope: resource) %>
+curl -X POST -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
+https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/:<%= t(".parent", scope: resource) %>_id/<%= t(".resource_plural", scope: resource) %>/ -d '{"<%= t(".resource_name", scope: resource) %>":<%= t('.gecko.create', scope: resource).to_json %>'}
+<% else %>
 curl -X POST -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
 https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/ -d '{"<%= t(".resource_name", scope: resource) %>":<%= t('.gecko.create', scope: resource).to_json %>'}
+<% end %>
 ```
 
 ```json
@@ -17,8 +22,8 @@ This endpoint also accepts embedded <%= t(".child", scope: resource) %>s.
 
 | Attribute                      | Type          | Description                | Required
 | ------------------------------ | ------------- | -------------------------- | ------------
-<% t(".attributes", scope: resource).select{ |k,v| v[:creatable] && !v[:private] }.each_pair do |key, value| %>
-  **<%= value[:name] %>**<%= " <span class='private'>private</span>" if value[:private] %><%= " <span class='deprecated'>deprecated</span>" if value[:deprecated] %> | <%= value[:type] %> | <%= value[:description] %> | <%= value[:required] %>
+<% t(".attributes", scope: resource).select{ |k,v| v[:creatable] }.each_pair do |key, value| %>
+  **<%= value[:name] %>**<%= " <span class='deprecated'>deprecated</span>" if value[:deprecated] %> | <%= value[:type] %> | <%= value[:description] %> | <%= value[:required] %>
 <% end %>
 
 <% unless t('.child', scope: resource).to_s.include?("missing") %>
@@ -46,4 +51,8 @@ This endpoint also accepts embedded <%= t(".child", scope: resource) %>s.
 <% end %>
 <% end %>
 ### HTTP Request
+<% if t(".nested", scope: resource) %>
+`POST https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/:<%= t(".parent", scope: resource) %>_id/<%= t(".resource_plural", scope: resource) %>/`
+<% else %>
 `POST https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/`
+<% end %>

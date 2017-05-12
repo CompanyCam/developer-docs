@@ -6,6 +6,7 @@ en:
     resource_klass: "Project"
     resource_name: "project"
     resource_plural: "projects"
+    nested: false
     parent: "company"
     parent_article: "a"
     parent_plural: "companies"

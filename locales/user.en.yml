@@ -6,6 +6,7 @@ en:
     resource_klass: "User"
     resource_name: "user"
     resource_plural: "users"
+    nested: false
     parent: "company"
     parent_article: "a"
     parent_plural: "companies"
@@ -31,7 +32,7 @@ en:
             url: "https://static.companycam.com/shawn-spencersmall.jpg"
           }
         ],
-        phone_number: "4024057300",
+        phone_number: "4025551212",
         role: {
           id: 1,
           name: "Admin",
@@ -59,7 +60,11 @@ en:
         first_name: "Gus"
       }
       create: {
-        first_name: "Gus"
+        first_name: "Shawn",
+        last_name: "Spencer",
+        email_address: "shawn@psych.com",
+        password: "security123",
+        phone_number: "4025551212"
       }
 
     attributes: {
@@ -79,7 +84,17 @@ en:
         name: "email_address",
         type: "String",
         description: "",
-        readonly: true
+        readonly: true,
+        creatable: true,
+        required: true
+      },
+      password: {
+        name: "password",
+        type: "String",
+        description: "Must be at least 7 characters",
+        private: true,
+        creatable: true,
+        required: true
       },
       status: {
         name: "status",
@@ -92,14 +107,16 @@ en:
         type: "String",
         description: "",
         updatable: true,
-        creatable: true
+        creatable: true,
+        required: true
       },
       last_name: {
         name: "last_name",
         type: "String",
         description: "",
         updatable: true,
-        creatable: true
+        creatable: true,
+        required: true
       },
       profile_image: {
         name: "profile_image",
@@ -111,7 +128,8 @@ en:
         name: "phone_number",
         type: "String",
         description: "",
-        updatable: true
+        updatable: true,
+        creatable: true
       },
       role: {
         name: "role",

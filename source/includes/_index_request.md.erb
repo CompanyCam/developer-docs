@@ -1,8 +1,13 @@
 ## List all <%= t(".resource_plural", scope: resource) %>
 
 ```shell
+<% if t(".nested", scope: resource) %>
 curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
-https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/{<%= t(".parent", scope: resource) %>_id}/<%= t(".resource_plural", scope: resource) %>/
+https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/:<%= t(".parent", scope: resource) %>_id/<%= t(".resource_plural", scope: resource) %>/
+<% else %>
+curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
+https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/
+<% end %>
 ```
 
 ```json
@@ -22,4 +27,8 @@ Returns a list of <%= t(".resource_plural", scope: resource) %> you’ve previou
 <% end %>
 
 ### HTTP Request:
+<% if t(".nested", scope: resource) %>
 `GET  https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/{<%= t(".parent", scope: resource) %>_id}/<%= t(".resource_plural", scope: resource) %>`
+<% else %>
+`GET  https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>`
+<% end %>
