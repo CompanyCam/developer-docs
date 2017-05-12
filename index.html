@@ -586,7 +586,7 @@ https://api.companycam.com/v2/companies/1
 
 <p><h2 id="list-all-users">List all users</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span class="o">}</span>/users/
+https://api.companycam.com/v2/users/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -610,7 +610,7 @@ https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span 
         </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/shawn-spencersmall.jpg&quot;</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
-    </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4024057300&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
@@ -657,11 +657,11 @@ https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span 
 
 <h3 id="http-request">HTTP Request:</h3>
 
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/companies/{company_id}/users</code></p>
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/users</code></p>
 
 <p><h2 id="create-a-new-user">Create a new user</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:{&quot;first_name&quot;:&quot;Gus&quot;}&#39;</span><span class="o">}</span>
+https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:{&quot;first_name&quot;:&quot;Shawn&quot;,&quot;last_name&quot;:&quot;Spencer&quot;,&quot;email_address&quot;:&quot;shawn@psych.com&quot;,&quot;password&quot;:&quot;security123&quot;,&quot;phone_number&quot;:&quot;4025551212&quot;}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -684,7 +684,7 @@ https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:
       </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/shawn-spencersmall.jpg&quot;</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4024057300&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
@@ -721,13 +721,31 @@ https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:
 </tr>
 </thead><tbody>
 <tr>
+<td><strong>email_address</strong></td>
+<td>String</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>password</strong></td>
+<td>String</td>
+<td>Must be at least 7 characters</td>
+<td>true</td>
+</tr>
+<tr>
 <td><strong>first_name</strong></td>
 <td>String</td>
 <td></td>
-<td></td>
+<td>true</td>
 </tr>
 <tr>
 <td><strong>last_name</strong></td>
+<td>String</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>phone_number</strong></td>
 <td>String</td>
 <td></td>
 <td></td>
@@ -765,7 +783,7 @@ https://api.companycam.com/v2/users/1
       </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://static.companycam.com/shawn-spencersmall.jpg"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4024057300"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4025551212"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
@@ -857,7 +875,7 @@ https://api.companycam.com/v2/users/current
       </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/shawn-spencersmall.jpg&quot;</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4024057300&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
@@ -997,7 +1015,7 @@ https://api.companycam.com/v2/users/current
 
 <p><h2 id="list-all-projects">List all projects</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span class="o">}</span>/projects/
+https://api.companycam.com/v2/projects/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1065,7 +1083,7 @@ https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span 
 
 <h3 id="http-request">HTTP Request:</h3>
 
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/companies/{company_id}/projects</code></p>
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects</code></p>
 
 <p><h2 id="create-a-new-project">Create a new project</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
@@ -1378,7 +1396,7 @@ https://api.companycam.com/v2/projects/current
 
 <p><h2 id="list-all-photos">List all photos</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/<span class="o">{</span>project_id<span class="o">}</span>/photos/
+https://api.companycam.com/v2/projects/:project_id/photos/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1442,7 +1460,7 @@ https://api.companycam.com/v2/projects/<span class="o">{</span>project_id<span c
 
 <p><h2 id="create-a-new-photo">Create a new photo</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/photos/ -d <span class="s1">&#39;{&quot;photo&quot;:{}&#39;</span><span class="o">}</span>
+https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&#39;{&quot;photo&quot;:{&quot;uri&quot;:&quot;https://your-image-url.jpg&quot;,&quot;coordinates&quot;:{&quot;lat&quot;:34.398307,&quot;lon&quot;:-119.712367},&quot;captured_at&quot;:1152230396}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -1490,11 +1508,29 @@ https://api.companycam.com/v2/photos/ -d <span class="s1">&#39;{&quot;photo&quot
 <th>Required</th>
 </tr>
 </thead><tbody>
+<tr>
+<td><strong>coordinates</strong></td>
+<td><a href="/#the-coordinate-object">Coordinate</a></td>
+<td>The latitude and longitude of the Project.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>uri</strong></td>
+<td>String</td>
+<td>The URI to the photo you wish to upload.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>captured_at</strong></td>
+<td>Integer</td>
+<td>Timestamp when the Photo was taken by the User.</td>
+<td>true</td>
+</tr>
 </tbody></table>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://api.companycam.com/v2/photos/</code></p>
+<p><code class="prettyprint">POST https://api.companycam.com/v2/projects/:project_id/photos/</code></p>
 
 <h2 id="retrieve-a-particular-photo">Retrieve a particular photo</h2>
 
