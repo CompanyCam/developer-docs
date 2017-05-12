@@ -2,7 +2,7 @@
 
 ```shell
 curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
-https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/
+https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/{<%= t(".parent", scope: resource) %>_id}/<%= t(".resource_plural", scope: resource) %>/
 ```
 
 ```json
@@ -22,4 +22,4 @@ Returns a list of <%= t(".resource_plural", scope: resource) %> you’ve previou
 <% end %>
 
 ### HTTP Request:
-`GET  https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>`
+`GET  https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/{<%= t(".parent", scope: resource) %>_id}/<%= t(".resource_plural", scope: resource) %>`
