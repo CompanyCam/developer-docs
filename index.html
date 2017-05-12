@@ -586,7 +586,7 @@ https://api.companycam.com/v2/companies/1
 
 <p><h2 id="list-all-users">List all users</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/users/
+https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span class="o">}</span>/users/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -657,7 +657,7 @@ https://api.companycam.com/v2/users/
 
 <h3 id="http-request">HTTP Request:</h3>
 
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/users</code></p>
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/companies/{company_id}/users</code></p>
 
 <p><h2 id="create-a-new-user">Create a new user</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
@@ -997,7 +997,7 @@ https://api.companycam.com/v2/users/current
 
 <p><h2 id="list-all-projects">List all projects</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/
+https://api.companycam.com/v2/companies/<span class="o">{</span>company_id<span class="o">}</span>/projects/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1065,7 +1065,7 @@ https://api.companycam.com/v2/projects/
 
 <h3 id="http-request">HTTP Request:</h3>
 
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects</code></p>
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/companies/{company_id}/projects</code></p>
 
 <p><h2 id="create-a-new-project">Create a new project</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
@@ -1378,7 +1378,7 @@ https://api.companycam.com/v2/projects/current
 
 <p><h2 id="list-all-photos">List all photos</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/photos/
+https://api.companycam.com/v2/projects/<span class="o">{</span>project_id<span class="o">}</span>/photos/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1438,7 +1438,7 @@ https://api.companycam.com/v2/photos/
 
 <h3 id="http-request">HTTP Request:</h3>
 
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/photos</code></p>
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos</code></p>
 
 <p><h2 id="create-a-new-photo">Create a new photo</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
