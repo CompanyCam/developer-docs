@@ -75,7 +75,7 @@ en:
         name: "company_id",
         type: "Integer",
         description: "A unique identifier for the Company the Photo belongs to.",
-        readonly: true,
+        readonly: true
       },
       creator_id: {
         name: "creator_id",
@@ -104,7 +104,7 @@ en:
       status: {
         name: "status",
         type: "String",
-        description: "Indicates the status of the Project. It will be `active` or `deleted`",
+        description: "Indicates the status of the Photo. It will be `active` or `deleted`",
         readonly: true
       },
       coordinates: {

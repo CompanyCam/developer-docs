@@ -104,7 +104,7 @@ en:
       status: {
         name: "status",
         type: "String",
-        description: "Indicates the status of the Project. It will be `active` or `deleted`",
+        description: "Indicates the status of the Photo. It will be `active` or `deleted`",
         readonly: true
       },
       coordinates: {
