@@ -19,10 +19,6 @@ en:
         creator_name: "Shawn Spencer",
         project_id: 1,
         status: "active",
-        coordinates: {
-          lat: 34.398307,
-          lon: -119.712367
-        },
         uris: [
           {
             type: "original",
@@ -50,10 +46,6 @@ en:
       }
       create: {
         uri: 'https://your-image-url.jpg',
-        coordinates: {
-          lat: 34.398307,
-          lon: -119.712367
-        },
         captured_at: 1152230396
       }
 
@@ -99,13 +91,6 @@ en:
         type: "String",
         description: "Indicates the status of the Project. It will be `active` or `deleted`",
         readonly: true
-      },
-      coordinates: {
-        name: "coordinates",
-        type: "[Coordinate](/#the-coordinate-object)",
-        description: "The latitude and longitude of the Project.",
-        creatable: true,
-        required: true
       },
       uris: {
         name: "uris",
