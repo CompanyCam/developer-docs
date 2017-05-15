@@ -2,7 +2,13 @@
   json_all = JSON.pretty_generate(json)
   json_single = JSON.pretty_generate(json.first)
 %>
+
+<% if t(".use_title", scope: resource) == true %>
+# <%= t(".navigation_title", scope: resource) %>
+<% else %>
 # <%= t(".resource_klass", scope: resource) %>
+<% end %>
+
 <% unless t(".parent", scope: resource).to_s.include?("missing") %>
   This is an object representing <%= t(".resource_article", scope: resource) %> <%= t(".resource_name", scope: resource) %> of <%= t(".parent_article", scope: resource) %> <%= t(".parent", scope: resource) %>. <%= t(".parent_plural", scope: resource).capitalize %> can
   have multiple <%= t(".resource_plural", scope: resource) %> but <%= t(".resource_article", scope: resource) %> <%= t(".resource_name", scope: resource) %> object belongs to only one
@@ -11,12 +17,14 @@
   This is an object representing <%= t(".resource_article", scope: resource) %> <%= t(".resource_name", scope: resource) %>.
 <% end %>
 
+<% unless t(".skip_resource", scope: resource) == true %>
 ## The <%= t(".resource_klass", scope: resource) %> object
 
 | Attribute                            | Type          | Description  | Readonly
 | ------------------------------------ | ------------- | ------------ | ----------
 <% t(".attributes", scope: resource).reject{ |k,v| v[:private] }.each_pair do |key, value| %>
 **<%= value[:name] %>**<%= " <span class='private'>private</span>" if value[:private] %> <%= " <span class='deprecated'>deprecated</span>" if value[:deprecated] %> | <%= value[:type] %> | <%= value[:description] %> | <%= value[:readonly] %>
+<% end %>
 <% end %>
 
 <% unless t(".disable_index", scope: resource) == true %>
@@ -27,7 +35,9 @@
   <%= partial "includes/create_request", locals: { resource: resource, json_single: json_single } %>
 <% end %>
 
-<%= partial "includes/show_request", locals: { resource: resource, json_single: json_single }  %>
+<% unless t(".disable_show", scope: resource) == true %>
+  <%= partial "includes/show_request", locals: { resource: resource, json_single: json_single }  %>
+<% end %>
 
 <% unless t(".disable_update", scope: resource) == true %>
   <%= partial "includes/update_request", locals: { resource: resource } %>

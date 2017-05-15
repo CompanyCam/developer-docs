@@ -1,15 +1,22 @@
 ---
 en:
-  photo:
+  group-photo:
     current: false
+    skip_resource: true
+    disable_create: true
+    disable_show: true
+    disable_update: true
+    disable_destroy: true
     resource_article: "a"
+    use_title: true
+    navigation_title: "Group Photo"
     resource_klass: "Photo"
     resource_name: "photo"
     resource_plural: "photos"
-    parent: "project"
+    parent: "group"
     nested: true
     parent_article: "a"
-    parent_plural: "projects"
+    parent_plural: "groups"
     json: [
       {
         id: 1,
