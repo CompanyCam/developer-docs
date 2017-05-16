@@ -2,7 +2,7 @@
 
 ```shell
 curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>" -H "X-CompanyCam-User: shawn@psych.com"
-https://api.companycam.com/v2 %>/
+https://api.companycam.com/v2/
 ```
 
 The CompanyCam API is entirely JSON based. In order to make an authenticated call
