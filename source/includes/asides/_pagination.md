@@ -1,6 +1,6 @@
 ## Pagination
 
-> The default limit is 100 items.
+> The default limit is 50 items.
 
 ```shell
 curl -X GET -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
