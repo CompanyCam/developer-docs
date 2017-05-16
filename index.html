@@ -160,105 +160,9 @@ You should replace <code>&lt;USER_EMAIL&gt;</code> with the user&rsquo;s email a
 
 <h1 id="getting-started">Getting Started</h1>
 
-<p><h2 id="creating-an-application">Creating an Application</h2></p>
+<p><h2 id="getting-an-access-token">Getting an Access Token</h2></p>
 
-<p>In order to use the CompanyCam API, you must first have a CompanyCam
-account, you can register a new application at
-<a href="https://app.companycam.com/oauth/applications">https://app.companycam.com/oauth/applications</a>.
-After successfully creating a new application, you will be given a set of 2
-unique keys:</p>
-
-<ul>
-<li>APPLICATION ID</li>
-<li>APPLICATION SECRET</li>
-</ul>
-
-<p>These keys are needed in order to obtain an access token to make the API calls.</p>
-
-<p>If you are already familiar with OAuth, then all you really need to know
-about are the two authentication endpoints. The authorization endpoint
-and the token request endpoint.</p>
-
-<p>These endpoints are:</p>
-
-<ul>
-<li><strong>/oauth/authorize</strong></li>
-<li><strong>/oauth/token</strong></li>
-</ul>
-
-<p><h2 id="getting-an-authorization-code">Getting an Authorization Code</h2></p>
-
-<p>An authorization code is the key used to retrieve the access token.
-In order to acquire an authorization code, you need to send your user
-to the authorization endpoint.</p>
-
-<p><code class="prettyprint">https://app.companycam.com/oauth/authorize?response_type=code&amp;client_id=&lt;CLIENT_ID&gt;&amp;redirect_uri=&lt;REDIRECT_URI&gt;</code></p>
-
-<p><code class="prettyprint">CLIENT_ID</code> should be set to your application ID. <code class="prettyprint">response_type</code> should
-always be set to “code”. <code class="prettyprint">REDIRECT_URI</code> should be set to the URL where
-the user will be redirected back to after the request is authorized.</p>
-
-<p>Once the user has successfully authorized the application, she will be redirected to
-the <code class="prettyprint">redirect_uri</code> with the authorization code as a query parameter.</p>
-
-<p>e.g. <code class="prettyprint">https://my.application.com/auth/app/callback?code=12bc6909c57aaa930</code></p>
-
-<p><h2 id="requesting-for-an-access-token">Requesting for an Access Token</h2>
-<pre class="highlight shell"><code>curl -H <span class="s2">&quot;Content-type: application/json&quot;</span> -X POST https://api.companycam.com/v2/oauth/token -d <span class="s1">&#39;{&quot;client_id&quot;: &quot;d38abea2ef61c916a1e131de9fd04146579578f&quot;, &quot;client_secret&quot;:&quot;2kj2kd07e197f9942ca1876d759e9e9c45bdcdc&quot;, &quot;redirect_uri&quot;: &quot;https://my.application.com/auth/app/callback&quot;, &quot;code&quot;: &quot;c3d11b23992f53d748c7b25148da1ac4d838919&quot;, &quot;grant_type&quot;: &quot;authorization_code&quot;}&#39;</span>
-</code></pre>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;57ed301af04bf35b40f255feb5ef469ab2f046aff14&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7200</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;026b343de07818b3ffebfb3001eff9a00aea43da0 &quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;public&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bearer&quot;</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></p>
-
-<p>The access token is a unique key used to make requests to the API. In
-order to get an access token, the user must make a POST request to
-<code class="prettyprint">https://api.companycam.com/v2/oauth/token</code> with the <code class="prettyprint">client_id</code>,
-<code class="prettyprint">client_secret</code>, <code class="prettyprint">redirect_uri</code>, <code class="prettyprint">code</code> and <code class="prettyprint">grant_type</code> as parameters.
-<code class="prettyprint">code</code> must match the authorization code returned by the
-authorization endpoint and <code class="prettyprint">grant_type</code> must be set to
-<code class="prettyprint">authorization_code</code></p>
-
-<p><h2 id="refreshing-access-tokens">Refreshing Access Tokens</h2></p>
-
-<p>The refresh token is a unique key used to request for a new access token whenever
-the current access token becomes expired. In order to refresh an access token, user must make a POST request to
-<code class="prettyprint">https://api.companycam.com/v2/oauth/token</code> with the <code class="prettyprint">client_id</code>,
-<code class="prettyprint">client_secret</code>, <code class="prettyprint">redirect_uri</code>, <code class="prettyprint">refresh_token</code> and <code class="prettyprint">grant_type</code> as parameters.</p>
-
-<p><code class="prettyprint">refresh_token</code> must match the refresh token returned by the
-authorization endpoint and <code class="prettyprint">grant_type</code> must be set to <code class="prettyprint">refresh_token</code>.</p>
-
-<pre class="highlight shell"><code>curl -H <span class="s2">"Content-type: application/json"</span> -X POST https://api.companycam.com/v2/oauth/token -d <span class="s1">'{"client_id": "9eb02720054", "client_secret": "b1d41094b83", "redirect_uri": "http://my.application.com/auth/callback", "refresh_token": "9582f8a45255", "grant_type": "refresh_token"}'</span>
-</code></pre>
-
-<pre class="highlight ruby"><code>
-</code></pre>
-
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"439fc57cf1525e51555"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">7200</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecfa1a22bd612cc1d8"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<blockquote>
-<p><strong>Note:</strong> When a token is refreshed, a new refresh token is
-generated and this should be the one used the next time token refresh
-is invoked. Using an expired refresh token would return this error.</p>
-</blockquote>
-
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invalid_request"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"error_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The request is missing a required parameter, includes an unsupported parameter value, or is otherwise malformed."</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<p>The user can generate a new access token in CompanyCam as long as they have sufficient privileges. Users can generate as many access tokens as they wish. The generated access token will be use in the <a href="/#authentication">Authorization header</a></p>
 
 <p><h2 id="making-an-api-call">Making an API call</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span> -H <span class="s2">&quot;X-CompanyCam-User: shawn@psych.com&quot;</span>
@@ -267,13 +171,13 @@ https://api.companycam.com/v2 %&gt;/
 
 <p>The CompanyCam API is entirely JSON based. In order to make an authenticated call
 to the API, you must include your access token with the call.
-OAuth2 uses a BEARER token that is passed along in an Authorization
+CompanyCam uses a BEARER token that is passed along in an Authorization
 header. You should whenever possible set the <code class="prettyprint">X-CompanyCam-User</code> HTTP header to the email address of the user performing the action. This email must match the user&rsquo;s email address in CompanyCam. If the <code class="prettyprint">X-CompanyCam-User</code> header is not provided it will fallback to using the user that setup the integration.</p>
 
 <p><h2 id="pagination">Pagination</h2></p>
 
 <blockquote>
-<p>The default limit is 100 items.</p>
+<p>The default limit is 50 items.</p>
 </blockquote>
 
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">"Content-type: application/json"</span> -H <span class="s2">"Authorization: Bearer &lt;ACCESS_TOKEN&gt;"</span>
