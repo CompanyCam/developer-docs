@@ -20,8 +20,14 @@ Returns a list of <%= t(".resource_plural", scope: resource) %> you’ve previou
 
 | Arguments          | Description
 |--------------------|--------------------
-| **per_page**          | used for pagination (default is 100)
+| **per_page**          | used for pagination (default is 50)
 | **page**           | used for pagination (default is 1)
+| **start_date**           | The timestamp of the earliest date a photo was taken
+| **end_date**           | The timestamp of the latest date a photo was taken
+| **user_ids**           | An array of user ids that captured a photo
+| **group_ids**           | An array of group ids that a member of captured a photo
+| **project_ids**           | An array of project ids that the photo belongs to
+| **tag_ids**           | An array of tag ids that the photo should be tagged with
 <% t(".attributes", scope: resource).select{ |k,v| v[:filterable] }.each_pair do |key, value| %>
   **<%= value[:name] %>** | <%= value[:filterable].is_a?(String) ? value[:filterable] : nil %>
 <% end %>
