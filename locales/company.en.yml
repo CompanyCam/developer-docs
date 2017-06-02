@@ -11,7 +11,7 @@ en:
     disable_update: true
     disable_destroy: true
     json: [{
-      id: 1,
+      id: "pd67-d",
       name: "Psych",
       status: 'active',
       address: {
@@ -37,7 +37,7 @@ en:
     attributes: {
       id: {
         name: "id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the company",
         readonly: true
       },

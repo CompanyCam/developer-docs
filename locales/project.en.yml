@@ -12,9 +12,9 @@ en:
     parent_plural: "companies"
     json: [
       {
-        id: 1,
-        company_id: 1,
-        creator_id: 1,
+        id: "d823n4",
+        company_id: "d2-38_",
+        creator_id: "dm2o33",
         creator_type: "User",
         creator_name: "Shawn Spencer",
         status: "active",
@@ -63,19 +63,19 @@ en:
     attributes: {
       id: {
         name: "id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the Project.",
         readonly: true
       },
       company_id: {
         name: "company_id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the Company the Project belongs to.",
         readonly: true,
       },
       creator_id: {
         name: "creator_id",
-        type: "Integer",
+        type: "String",
         description: "The id of the entity that created the Project",
         readonly: true
       },

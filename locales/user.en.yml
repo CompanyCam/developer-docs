@@ -12,8 +12,8 @@ en:
     parent_plural: "companies"
     json: [
       {
-        id: 1,
-        company_id: 1,
+        id: "d83994",
+        company_id: "dh2j4k",
         email_address: "shawn@psych.com",
         status: "active",
         first_name: "Shawn",
@@ -34,7 +34,7 @@ en:
         ],
         phone_number: "4025551212",
         role: {
-          id: 1,
+          id: "d883mm",
           name: "Admin",
           permissions: [
             {
@@ -70,13 +70,13 @@ en:
     attributes: {
       id: {
         name: "id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the User.",
         readonly: true
       },
       company_id: {
         name: "company_id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the Company the User is an employee of.",
         readonly: true,
       },

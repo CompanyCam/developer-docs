@@ -19,12 +19,12 @@ en:
     parent_plural: "groups"
     json: [
       {
-        id: 1,
-        company_id: 1,
-        creator_id: 1,
+        id: "mdh57d",
+        company_id: "difmw2",
+        creator_id: "dkm3id",
         creator_type: "User",
         creator_name: "Shawn Spencer",
-        project_id: 1,
+        project_id: "dj37c9",
         status: "active",
         coordinates: {
           lat: 34.398307,
@@ -67,19 +67,19 @@ en:
     attributes: {
       id: {
         name: "id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the Photo.",
         readonly: true
       },
       company_id: {
         name: "company_id",
-        type: "Integer",
+        type: "String",
         description: "A unique identifier for the Company the Photo belongs to.",
         readonly: true,
       },
       creator_id: {
         name: "creator_id",
-        type: "Integer",
+        type: "String",
         description: "The id of the User that took the Photo.",
         readonly: true
       },
@@ -97,7 +97,7 @@ en:
       },
       project_id: {
         name: "project_id",
-        type: "Integer",
+        type: "String",
         description: "The id of the Project the Photo was taken at.",
         readonly: true
       },

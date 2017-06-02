@@ -8,7 +8,7 @@ en:
     attributes: {
       id: {
         name: "id",
-        type: "Interger",
+        type: "String",
         description: "The id of the Role"
       },
       name: {
