@@ -906,6 +906,12 @@ https://api.companycam.com/v2/users/current
 <td>true</td>
 </tr>
 <tr>
+<td><strong>project_url</strong></td>
+<td>String</td>
+<td>The link to the project in CompanyCam</td>
+<td>true</td>
+</tr>
+<tr>
 <td><strong>slug</strong></td>
 <td>String</td>
 <td>A unique identifier use the Project that is used to construct some public URLs.</td>
@@ -976,6 +982,7 @@ https://api.companycam.com/v2/projects/
         </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
+    </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -1035,7 +1042,7 @@ https://api.companycam.com/v2/projects/
 
 <p><h2 id="create-a-new-project">Create a new project</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&quot;:{}&#39;</span><span class="o">}</span>
+https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&quot;:{&quot;name&quot;:&quot;Psych Office&quot;,&quot;address&quot;:{&quot;street_address_1&quot;:&quot;2756 O Hara Lane&quot;,&quot;city&quot;:&quot;Santa Barbara&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postal_code&quot;:&quot;93101&quot;,&quot;country&quot;:&quot;US&quot;},&quot;coordinates&quot;:{&quot;lat&quot;:34.398307,&quot;lon&quot;:-119.712367}}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d823n4&quot;</span><span class="p">,</span><span class="w">
@@ -1071,6 +1078,7 @@ https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&
       </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
+  </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -1091,6 +1099,30 @@ https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&
 <th>Required</th>
 </tr>
 </thead><tbody>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>The name of the Project</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td><a href="/#the-address-object">Address</a></td>
+<td>The physical address of the Project.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>coordinates</strong></td>
+<td><a href="/#the-coordinate-object">Coordinate</a></td>
+<td>The latitude and longitude of the Project.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>geofence</strong></td>
+<td>Array[<a href="/#the-coordinate-object">Coordinate</a>]</td>
+<td>The Project&rsquo;s geofence coordinates that form an enclosing perimeter.</td>
+<td></td>
+</tr>
 </tbody></table>
 
 <h3 id="http-request">HTTP Request</h3>
@@ -1135,6 +1167,7 @@ https://api.companycam.com/v2/projects/1
       </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
+  </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -1224,6 +1257,7 @@ https://api.companycam.com/v2/projects/current
       </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
+  </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
