@@ -152,11 +152,5 @@ en:
         type: "Integer",
         description: "Timestamp when the Photo was last update.",
         readonly: true
-      },
-      comments: {
-        name: "comments",
-        type: "Array[[Comment](/)]",
-        description: "A list of comments",
-        creatable: true
       }
     }
