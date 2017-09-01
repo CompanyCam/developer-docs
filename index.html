@@ -484,6 +484,12 @@ https://api.companycam.com/v2/companies/1
 <td>Timestamp when the User was last updated</td>
 <td>true</td>
 </tr>
+<tr>
+<td><strong>user_url</strong></td>
+<td>String</td>
+<td>The link to the user in the webapp.</td>
+<td>true</td>
+</tr>
 </tbody></table>
 
 <p><h2 id="list-all-users">List all users</h2>
@@ -531,6 +537,7 @@ https://api.companycam.com/v2/users/
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nt">&quot;user_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/users/1234&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737206</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737744</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -629,6 +636,7 @@ https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
+  </span><span class="nt">&quot;user_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/users/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737206</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737744</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -726,6 +734,7 @@ https://api.companycam.com/v2/users/1
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
+  </span><span class="nt">&quot;user_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/users/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737206</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737744</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -818,6 +827,7 @@ https://api.companycam.com/v2/users/current
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
+  </span><span class="nt">&quot;user_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/users/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737206</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1490737744</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -908,7 +918,7 @@ https://api.companycam.com/v2/users/current
 <tr>
 <td><strong>project_url</strong></td>
 <td>String</td>
-<td>The link to the project in CompanyCam</td>
+<td>The link to the project in the webapp.</td>
 <td>true</td>
 </tr>
 <tr>
@@ -1372,6 +1382,12 @@ https://api.companycam.com/v2/projects/current
 <td>Timestamp when the Photo was last update.</td>
 <td>true</td>
 </tr>
+<tr>
+<td><strong>photo_url</strong></td>
+<td>String</td>
+<td>The link to the photo in the webapp.</td>
+<td>true</td>
+</tr>
 </tbody></table>
 
 <p><h2 id="list-all-photos">List all photos</h2>
@@ -1407,6 +1423,7 @@ https://api.companycam.com/v2/projects/:project_id/photos/
     </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
@@ -1494,6 +1511,7 @@ https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
@@ -1568,6 +1586,7 @@ https://api.companycam.com/v2/photos/1
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
@@ -1656,6 +1675,7 @@ https://api.companycam.com/v2/photos/
     </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
@@ -1750,6 +1770,7 @@ https://api.companycam.com/v2/users/:user_id/photos/
     </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
@@ -1844,6 +1865,7 @@ https://api.companycam.com/v2/groups/:group_id/photos/
     </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
