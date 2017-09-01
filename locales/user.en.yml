@@ -51,6 +51,7 @@ en:
             }
           ]
         },
+        user_url: "https://app.companycam.com/users/1234",
         created_at: 1490737206,
         updated_at: 1490737744
       }
@@ -147,6 +148,12 @@ en:
         name: "updated_at",
         type: "Integer",
         description: "Timestamp when the User was last updated",
+        readonly: true
+      },
+      user_url: {
+        name: "user_url",
+        type: "String",
+        description: "The link to the user in the webapp.",
         readonly: true
       }
     }

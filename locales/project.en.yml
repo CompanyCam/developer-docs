@@ -167,5 +167,11 @@ en:
         type: "Integer",
         description: "Timestamp when the Project was last updated",
         readonly: true
+      },
+      project_url: {
+        name: "project_url",
+        type: "String",
+        description: "The link to the project in the webapp.",
+        readonly: true
       }
     }

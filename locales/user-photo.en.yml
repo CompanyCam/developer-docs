@@ -46,6 +46,7 @@ en:
         ],
         hash: "00ab337b7399151e5d4aa3bd4226e8dd",
         internal: false,
+        photo_url: "https://app.companycam.com/photos/8675309",
         captured_at: 1152230396,
         created_at: 1152230608,
         updated_at: 1152230400
@@ -158,6 +159,12 @@ en:
         name: "updated_at",
         type: "Integer",
         description: "Timestamp when the Photo was last update.",
+        readonly: true
+      },
+      photo_url: {
+        name: "photo_url",
+        type: "String",
+        description: "The link to the photo in the webapp.",
         readonly: true
       }
     }
