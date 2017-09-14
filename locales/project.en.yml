@@ -107,6 +107,7 @@ en:
         name: "status",
         type: "String",
         description: "Indicates the status of the Project. It will be `active` or `deleted`",
+        filterable: "Either `active` or `deleted`. If empty all projects will be returned.",
         readonly: true
       },
       name: {

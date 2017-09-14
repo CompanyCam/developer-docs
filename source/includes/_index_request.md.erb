@@ -20,7 +20,7 @@ Returns a list of <%= t(".resource_plural", scope: resource) %> you’ve previou
 
 | Arguments          | Description
 |--------------------|--------------------
-| **per_page**          | used for pagination (default is 50)
+| **per_page**          | used for pagination (default is 25)
 | **page**           | used for pagination (default is 1)
 <% t(".attributes", scope: resource).select{ |k,v| v[:filterable] }.each_pair do |key, value| %>
   **<%= value[:name] %>** | <%= value[:filterable].is_a?(String) ? value[:filterable] : nil %>
