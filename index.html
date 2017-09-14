@@ -556,7 +556,7 @@ https://api.companycam.com/v2/users/
 </thead><tbody>
 <tr>
 <td><strong>per_page</strong></td>
-<td>used for pagination (default is 50)</td>
+<td>used for pagination (default is 25)</td>
 </tr>
 <tr>
 <td><strong>page</strong></td>
@@ -990,11 +990,15 @@ https://api.companycam.com/v2/projects/
 </thead><tbody>
 <tr>
 <td><strong>per_page</strong></td>
-<td>used for pagination (default is 50)</td>
+<td>used for pagination (default is 25)</td>
 </tr>
 <tr>
 <td><strong>page</strong></td>
 <td>used for pagination (default is 1)</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty all projects will be returned.</td>
 </tr>
 </tbody></table>
 
@@ -1395,7 +1399,7 @@ https://api.companycam.com/v2/projects/:project_id/photos/
 </thead><tbody>
 <tr>
 <td><strong>per_page</strong></td>
-<td>used for pagination (default is 50)</td>
+<td>used for pagination (default is 25)</td>
 </tr>
 <tr>
 <td><strong>page</strong></td>
@@ -1647,7 +1651,7 @@ https://api.companycam.com/v2/photos/
 </thead><tbody>
 <tr>
 <td><strong>per_page</strong></td>
-<td>used for pagination (default is 50)</td>
+<td>used for pagination (default is 25)</td>
 </tr>
 <tr>
 <td><strong>page</strong></td>
@@ -1718,7 +1722,7 @@ https://api.companycam.com/v2/users/:user_id/photos/
 </thead><tbody>
 <tr>
 <td><strong>per_page</strong></td>
-<td>used for pagination (default is 50)</td>
+<td>used for pagination (default is 25)</td>
 </tr>
 <tr>
 <td><strong>page</strong></td>
@@ -1789,7 +1793,7 @@ https://api.companycam.com/v2/groups/:group_id/photos/
 </thead><tbody>
 <tr>
 <td><strong>per_page</strong></td>
-<td>used for pagination (default is 50)</td>
+<td>used for pagination (default is 25)</td>
 </tr>
 <tr>
 <td><strong>page</strong></td>
