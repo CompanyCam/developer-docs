@@ -174,5 +174,11 @@ en:
         type: "String",
         description: "The link to the project in the webapp.",
         readonly: true
+      },
+      query: {
+        name: "query",
+        type: "String",
+        filterable: "Pass a value to search by the projects `name` and `street_address_1`",
+        private: true
       }
     }
