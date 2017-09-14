@@ -159,5 +159,41 @@ en:
         type: "String",
         description: "The link to the photo in the webapp.",
         readonly: true
+      },
+      start_date: {
+        name: "start_date",
+        type: "DateTime",
+        filterable: "The timestamp of the earliest date a photo was taken",
+        private: true
+      },
+      end_date: {
+        name: "end_date",
+        type: "DateTime",
+        filterable: "The timestamp of the latest date a photo was taken",
+        private: true
+      },
+      user_ids: {
+        name: "user_ids",
+        type: "Array[Integer]",
+        filterable: "An array of user ids that captured a photo",
+        private: true
+      },
+      group_ids: {
+        name: "group_ids",
+        type: "Array[Integer]",
+        filterable: "An array of group ids that a member of captured a photo",
+        private: true
+      },
+      project_ids: {
+        name: "project_ids",
+        type: "Array[Integer]",
+        filterable: "An array of project ids that the photo belongs to",
+        private: true
+      },
+      tag_ids: {
+        name: "tag_ids",
+        type: "Array[Integer]",
+        filterable: "An array of tag ids that the photo should be tagged with",
+        private: true
       }
     }
