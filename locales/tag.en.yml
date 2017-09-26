@@ -1,0 +1,69 @@
+---
+en:
+  tag:
+    current: false
+    resource_article: "a"
+    resource_klass: "Tag"
+    resource_name: "tag"
+    resource_plural: "tags"
+    parent: "company"
+    nested: false
+    parent_article: "a"
+    parent_plural: "companies"
+    json: [
+      {
+        id: "u49w25",
+        company_id: "d73nn2",
+        display_value: "Front Side",
+        value: "front size",
+        created_at: 1152230608,
+        updated_at: 1152230400
+      }
+    ]
+    gecko:
+      update: {
+        display_value: "Front Face"
+      }
+      create: {
+        display_value: "West Side"
+      }
+    attributes: {
+      id: {
+        name: "id",
+        type: "String",
+        description: "A unique identifier for the Tag.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "String",
+        description: "A unique identifier for the Company the Tag belongs to.",
+        readonly: true
+      },
+      display_value: {
+        name: "display_value",
+        type: "String",
+        description: "The display value of the Tag. Used to display to the user",
+        creatable: true,
+        required: true,
+        readonly: false
+      },
+      value: {
+        name: "value",
+        type: "String",
+        description: "The lowercase version of the `display_value`. This is useful for searching and sorting.",
+        readonly: true
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Tag was created on the server.",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Tag was last update.",
+        readonly: true
+      }
+    }
