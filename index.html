@@ -1206,59 +1206,6 @@ https://api.companycam.com/v2/projects/o36hk3
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/projects/{project_id}/</code></p>
 
-<p><h2 id="get-current-project">Get current project</h2>
-<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/current
-</code></pre>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d823n4&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d2-38_&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dm2o33&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Psych Office&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;street_address_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2756 O&#39;Hara Lane&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;street_address_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Santa Barbara&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CA&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;postal_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;93101&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;US&quot;</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-119.712367</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">&quot;feature_image&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262.jpg&quot;</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg&quot;</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1395792000</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></p>
-
-<p>Retrieves the details of the current project.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET https://api.companycam.com/v2/projects/current</code></p>
-
           <h1 id="photo">Photo</h1>
 
 <p>This is an object representing a photo of a project. Projects can
