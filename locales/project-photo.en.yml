@@ -13,7 +13,6 @@ en:
     nested: true
     parent_article: "a"
     parent_plural: "projects"
-    disable_index: true
     disable_update: true
     disable_destroy: true
     disable_show: true
@@ -191,12 +190,6 @@ en:
         name: "group_ids",
         type: "Array[Integer]",
         filterable: "An array of group ids that a member of captured a photo",
-        private: true
-      },
-      project_ids: {
-        name: "project_ids",
-        type: "Array[Integer]",
-        filterable: "An array of project ids that the photo belongs to",
         private: true
       },
       tag_ids: {
