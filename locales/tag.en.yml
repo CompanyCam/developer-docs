@@ -10,11 +10,11 @@ en:
     nested: false
     parent_article: "a"
     parent_plural: "companies"
-    show_id: "u49w25"
+    show_id: "48892885"
     json: [
       {
-        id: "u49w25",
-        company_id: "d73nn2",
+        id: "48892885",
+        company_id: "8292212",
         display_value: "Front Side",
         value: "front size",
         created_at: 1152230608,

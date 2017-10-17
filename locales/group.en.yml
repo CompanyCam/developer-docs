@@ -10,17 +10,17 @@ en:
     parent: "company"
     parent_article: "a"
     parent_plural: "companies"
-    show_id: "d83994"
+    show_id: "3992883"
     json: [
       {
-        id: "d83994",
-        company_id: "dh2j4k",
+        id: "3992883",
+        company_id: "8292212",
         name: "The Psych Crew",
         status: "active",
         users: [
           {
-            id: "d83994",
-            company_id: "dh2j4k",
+            id: "2789583992",
+            company_id: "94772883",
             email_address: "shawn@psych.com",
             status: "active",
             first_name: "Shawn",
@@ -41,7 +41,7 @@ en:
             ],
             phone_number: "4025551212",
             role: {
-              id: "d883mm",
+              id: "2789382",
               name: "Admin",
               permissions: [
                 {

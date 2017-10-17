@@ -8,15 +8,15 @@ en:
     resource_plural: "photos"
     nested: false
     disable_create: true
-    show_id: "d83n44"
+    show_id: "8392884992"
     json: [
       {
-        id: "d83n44",
-        company_id: "d73nn2",
-        creator_id: "83nn2g",
+        id: "8392884992",
+        company_id: "8292212",
+        creator_id: "2789583992",
         creator_type: "User",
         creator_name: "Shawn Spencer",
-        project_id: "as3ddf",
+        project_id: "94772883",
         status: "active",
         coordinates: {
           lat: 34.398307,

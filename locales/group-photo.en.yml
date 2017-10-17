@@ -17,15 +17,15 @@ en:
     nested: true
     parent_article: "a"
     parent_plural: "groups"
-    show_id: "mdh57d"
+    show_id: "23532882"
     json: [
       {
-        id: "mdh57d",
-        company_id: "difmw2",
-        creator_id: "dkm3id",
+        id: "23532882",
+        company_id: "8292212",
+        creator_id: "2789583992",
         creator_type: "User",
         creator_name: "Shawn Spencer",
-        project_id: "dj37c9",
+        project_id: "94772883",
         status: "active",
         coordinates: {
           lat: 34.398307,

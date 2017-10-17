@@ -10,12 +10,12 @@ en:
     parent: "company"
     parent_article: "a"
     parent_plural: "companies"
-    show_id: "d823n4"
+    show_id: "94772883"
     json: [
       {
-        id: "d823n4",
-        company_id: "d2-38_",
-        creator_id: "dm2o33",
+        id: "94772883",
+        company_id: "8292212",
+        creator_id: "2789583992",
         creator_type: "User",
         creator_name: "Shawn Spencer",
         status: "active",
