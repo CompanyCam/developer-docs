@@ -386,10 +386,10 @@ and &lsquo;page&rsquo; parameters on GET requests to index pages.</p>
 
 <p><h2 id="retrieve-a-particular-company">Retrieve a particular company</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/companies/pd67d2
+https://api.companycam.com/v2/companies/8292212
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pd67d2&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Psych&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -515,8 +515,8 @@ https://api.companycam.com/v2/users/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -537,7 +537,7 @@ https://api.companycam.com/v2/users/
     </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37491662&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -590,8 +590,8 @@ https://api.companycam.com/v2/users/
 https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:{&quot;first_name&quot;:&quot;Shawn&quot;,&quot;last_name&quot;:&quot;Spencer&quot;,&quot;email_address&quot;:&quot;shawn@psych.com&quot;,&quot;password&quot;:&quot;security123&quot;,&quot;phone_number&quot;:&quot;4025551212&quot;}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -612,7 +612,7 @@ https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37491662&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -685,11 +685,11 @@ https://api.companycam.com/v2/users/ -d <span class="s1">&#39;{&quot;user&quot;:
 
 <p><h2 id="retrieve-a-particular-user">Retrieve a particular user</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/users/d83994
+https://api.companycam.com/v2/users/2789583992
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -710,7 +710,7 @@ https://api.companycam.com/v2/users/d83994
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37491662&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -741,7 +741,7 @@ https://api.companycam.com/v2/users/d83994
 
 <p><h2 id="update-a-user">Update a user</h2>
 <pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/users/d83994 -d <span class="s1">&#39;{&quot;user&quot;:{&quot;first_name&quot;:&quot;Gus&quot;}}&#39;</span>
+https://api.companycam.com/v2/users/2789583992 -d <span class="s1">&#39;{&quot;user&quot;:{&quot;first_name&quot;:&quot;Gus&quot;}}&#39;</span>
 </code></pre></p>
 
 <blockquote>
@@ -761,7 +761,7 @@ This request accepts the same arguments as the user creation call.</p>
 
 <p><h2 id="delete-a-user">Delete a user</h2>
 <pre class="highlight shell"><code>curl -X DELETE -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/users/d83994
+https://api.companycam.com/v2/users/2789583992
 </code></pre></p>
 
 <blockquote>
@@ -781,8 +781,8 @@ https://api.companycam.com/v2/users/d83994
 https://api.companycam.com/v2/users/current
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -803,7 +803,7 @@ https://api.companycam.com/v2/users/current
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37491662&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -952,9 +952,9 @@ https://api.companycam.com/v2/projects/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d823n4&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d2-38_&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dm2o33&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
@@ -1032,9 +1032,9 @@ https://api.companycam.com/v2/projects/
 https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&quot;:{&quot;name&quot;:&quot;Psych Office&quot;,&quot;address&quot;:{&quot;street_address_1&quot;:&quot;2756 O Hara Lane&quot;,&quot;city&quot;:&quot;Santa Barbara&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;postal_code&quot;:&quot;93101&quot;,&quot;country&quot;:&quot;US&quot;},&quot;coordinates&quot;:{&quot;lat&quot;:34.398307,&quot;lon&quot;:-119.712367}}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d823n4&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d2-38_&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dm2o33&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
@@ -1118,12 +1118,12 @@ https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&
 
 <p><h2 id="retrieve-a-particular-project">Retrieve a particular project</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/d823n4
+https://api.companycam.com/v2/projects/94772883
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d823n4&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d2-38_&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dm2o33&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
@@ -1171,7 +1171,7 @@ https://api.companycam.com/v2/projects/d823n4
 
 <p><h2 id="update-a-project">Update a project</h2>
 <pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/d823n4 -d <span class="s1">&#39;{&quot;project&quot;:{&quot;name&quot;:&quot;Psych Business Office&quot;}}&#39;</span>
+https://api.companycam.com/v2/projects/94772883 -d <span class="s1">&#39;{&quot;project&quot;:{&quot;name&quot;:&quot;Psych Business Office&quot;}}&#39;</span>
 </code></pre></p>
 
 <blockquote>
@@ -1191,7 +1191,7 @@ This request accepts the same arguments as the project creation call.</p>
 
 <p><h2 id="delete-a-project">Delete a project</h2>
 <pre class="highlight shell"><code>curl -X DELETE -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/d823n4
+https://api.companycam.com/v2/projects/94772883
 </code></pre></p>
 
 <blockquote>
@@ -1218,12 +1218,12 @@ https://api.companycam.com/v2/projects/:project_id/photos/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83n44&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;83nn2g&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;as3ddf&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
@@ -1306,12 +1306,12 @@ https://api.companycam.com/v2/projects/:project_id/photos/
 https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&#39;{&quot;photo&quot;:{&quot;uri&quot;:&quot;https://your-image-url.jpg&quot;,&quot;coordinates&quot;:{&quot;lat&quot;:34.398307,&quot;lon&quot;:-119.712367},&quot;captured_at&quot;:1152230396}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83n44&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;83nn2g&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;as3ddf&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
@@ -1488,12 +1488,12 @@ https://api.companycam.com/v2/photos/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83n44&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;83nn2g&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8392884992&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;as3ddf&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
@@ -1577,15 +1577,15 @@ https://api.companycam.com/v2/photos/
 
 <p><h2 id="retrieve-a-particular-photo">Retrieve a particular photo</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/photos/d83n44
+https://api.companycam.com/v2/photos/8392884992
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83n44&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;83nn2g&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8392884992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;as3ddf&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
@@ -1622,7 +1622,7 @@ https://api.companycam.com/v2/photos/d83n44
 
 <p><h2 id="update-a-photo">Update a photo</h2>
 <pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/photos/d83n44 -d <span class="s1">&#39;{&quot;photo&quot;:{&quot;internal&quot;:false}}&#39;</span>
+https://api.companycam.com/v2/photos/8392884992 -d <span class="s1">&#39;{&quot;photo&quot;:{&quot;internal&quot;:false}}&#39;</span>
 </code></pre></p>
 
 <blockquote>
@@ -1642,7 +1642,7 @@ This request accepts the same arguments as the photo creation call.</p>
 
 <p><h2 id="delete-a-photo">Delete a photo</h2>
 <pre class="highlight shell"><code>curl -X DELETE -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/photos/d83n44
+https://api.companycam.com/v2/photos/8392884992
 </code></pre></p>
 
 <blockquote>
@@ -1729,14 +1729,14 @@ https://api.companycam.com/v2/groups/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3992883&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Psych Crew&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -1757,7 +1757,7 @@ https://api.companycam.com/v2/groups/
         </span><span class="p">],</span><span class="w">
         </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789382&quot;</span><span class="p">,</span><span class="w">
           </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
           </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -1815,14 +1815,14 @@ https://api.companycam.com/v2/groups/
 https://api.companycam.com/v2/groups/ -d <span class="s1">&#39;{&quot;group&quot;:{&quot;name&quot;:&quot;The Psych Crew&quot;,&quot;users&quot;:[&quot;d83994&quot;]}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3992883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Psych Crew&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -1843,7 +1843,7 @@ https://api.companycam.com/v2/groups/ -d <span class="s1">&#39;{&quot;group&quot
       </span><span class="p">],</span><span class="w">
       </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789382&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
@@ -1903,17 +1903,17 @@ https://api.companycam.com/v2/groups/ -d <span class="s1">&#39;{&quot;group&quot
 
 <p><h2 id="retrieve-a-particular-group">Retrieve a particular group</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/groups/d83994
+https://api.companycam.com/v2/groups/3992883
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3992883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Psych Crew&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d83994&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dh2j4k&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;email_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shawn@psych.com&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn&quot;</span><span class="p">,</span><span class="w">
@@ -1934,7 +1934,7 @@ https://api.companycam.com/v2/groups/d83994
       </span><span class="p">],</span><span class="w">
       </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4025551212&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d883mm&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789382&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
@@ -1970,7 +1970,7 @@ https://api.companycam.com/v2/groups/d83994
 
 <p><h2 id="update-a-group">Update a group</h2>
 <pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/groups/d83994 -d <span class="s1">&#39;{&quot;group&quot;:{&quot;name&quot;:&quot;The Psych Crew&quot;}}&#39;</span>
+https://api.companycam.com/v2/groups/3992883 -d <span class="s1">&#39;{&quot;group&quot;:{&quot;name&quot;:&quot;The Psych Crew&quot;}}&#39;</span>
 </code></pre></p>
 
 <blockquote>
@@ -1990,7 +1990,7 @@ This request accepts the same arguments as the group creation call.</p>
 
 <p><h2 id="delete-a-group">Delete a group</h2>
 <pre class="highlight shell"><code>curl -X DELETE -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/groups/d83994
+https://api.companycam.com/v2/groups/3992883
 </code></pre></p>
 
 <blockquote>
@@ -2065,8 +2065,8 @@ https://api.companycam.com/v2/tags/
 </code></pre>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;u49w25&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48892885&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;display_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Front Side&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;front size&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
@@ -2104,8 +2104,8 @@ https://api.companycam.com/v2/tags/
 https://api.companycam.com/v2/tags/ -d <span class="s1">&#39;{&quot;tag&quot;:{&quot;display_value&quot;:&quot;West Side&quot;}&#39;</span><span class="o">}</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;u49w25&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48892885&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;display_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Front Side&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;front size&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
@@ -2139,11 +2139,11 @@ https://api.companycam.com/v2/tags/ -d <span class="s1">&#39;{&quot;tag&quot;:{&
 
 <p><h2 id="retrieve-a-particular-tag">Retrieve a particular tag</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/tags/u49w25
+https://api.companycam.com/v2/tags/48892885
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;u49w25&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d73nn2&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48892885&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;display_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Front Side&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;front size&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
@@ -2159,7 +2159,7 @@ https://api.companycam.com/v2/tags/u49w25
 
 <p><h2 id="update-a-tag">Update a tag</h2>
 <pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/tags/u49w25 -d <span class="s1">&#39;{&quot;tag&quot;:{&quot;display_value&quot;:&quot;Front Face&quot;}}&#39;</span>
+https://api.companycam.com/v2/tags/48892885 -d <span class="s1">&#39;{&quot;tag&quot;:{&quot;display_value&quot;:&quot;Front Face&quot;}}&#39;</span>
 </code></pre></p>
 
 <blockquote>
@@ -2179,7 +2179,7 @@ This request accepts the same arguments as the tag creation call.</p>
 
 <p><h2 id="delete-a-tag">Delete a tag</h2>
 <pre class="highlight shell"><code>curl -X DELETE -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/tags/u49w25
+https://api.companycam.com/v2/tags/48892885
 </code></pre></p>
 
 <blockquote>
