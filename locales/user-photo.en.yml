@@ -17,9 +17,10 @@ en:
     nested: true
     parent_article: "a"
     parent_plural: "users"
+    show_id: "38dm2k"
     json: [
       {
-        id: 1,
+        id: "38dm2k",
         company_id: "d73nn2",
         creator_id: "83nn2g",
         creator_type: "User",

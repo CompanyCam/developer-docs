@@ -17,6 +17,7 @@ en:
     nested: true
     parent_article: "a"
     parent_plural: "groups"
+    show_id: "mdh57d"
     json: [
       {
         id: "mdh57d",

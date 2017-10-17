@@ -10,6 +10,7 @@ en:
     nested: false
     parent_article: "a"
     parent_plural: "companies"
+    show_id: "u49w25"
     json: [
       {
         id: "u49w25",

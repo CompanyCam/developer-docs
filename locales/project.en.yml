@@ -10,6 +10,7 @@ en:
     parent: "company"
     parent_article: "a"
     parent_plural: "companies"
+    show_id: "d823n4"
     json: [
       {
         id: "d823n4",

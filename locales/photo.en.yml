@@ -10,6 +10,7 @@ en:
     nested: true
     parent_article: "a"
     parent_plural: "projects"
+    show_id: "d83n44"
     json: [
       {
         id: "d83n44",

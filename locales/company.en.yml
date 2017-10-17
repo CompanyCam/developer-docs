@@ -10,8 +10,9 @@ en:
     disable_create: true
     disable_update: true
     disable_destroy: true
+    show_id: "pd67d2"
     json: [{
-      id: "pd67-d",
+      id: "pd67d2",
       name: "Psych",
       status: 'active',
       address: {

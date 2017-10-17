@@ -1,0 +1,142 @@
+---
+en:
+  group:
+    current: false
+    resource_article: "a"
+    resource_klass: "Group"
+    resource_name: "group"
+    resource_plural: "groups"
+    nested: false
+    parent: "company"
+    parent_article: "a"
+    parent_plural: "companies"
+    show_id: "d83994"
+    json: [
+      {
+        id: "d83994",
+        company_id: "dh2j4k",
+        name: "The Psych Crew",
+        status: "active",
+        users: [
+          {
+            id: "d83994",
+            company_id: "dh2j4k",
+            email_address: "shawn@psych.com",
+            status: "active",
+            first_name: "Shawn",
+            last_name: "Spencer",
+            profile_image: [
+              {
+                type: "original",
+                url: "https://static.companycam.com/shawn-spencer.jpg"
+              },
+              {
+                type: "web",
+                url: "https://static.companycam.com/shawn-spencerweb.jpg"
+              },
+              {
+                type: "thumbnail",
+                url: "https://static.companycam.com/shawn-spencersmall.jpg"
+              }
+            ],
+            phone_number: "4025551212",
+            role: {
+              id: "d883mm",
+              name: "Admin",
+              permissions: [
+                {
+                  title: "Modify user accounts",
+                  value: 1
+                },
+                {
+                  title: "Delete user accounts",
+                  value: 2
+                },
+                {
+                  title: "Move company photos",
+                  value: 8
+                }
+              ]
+            },
+            user_url: "https://app.companycam.com/users/1234",
+            created_at: 1490737206,
+            updated_at: 1490737744
+          }
+        ],
+        group_url: "https://app.companycam.com/groups/1234",
+        created_at: 1490737206,
+        updated_at: 1490737744
+      }
+    ]
+    gecko:
+      update: {
+        name: "The Psych Crew"
+      }
+      create: {
+        name: "The Psych Crew",
+        users: ["d83994"]
+      }
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "String",
+        description: "A unique identifier for the Group.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "String",
+        description: "A unique identifier for the Company the Group is a part of.",
+        readonly: true
+      },
+      name: {
+        name: "name",
+        type: "String",
+        description: "The name of the Group",
+        readonly: false,
+        creatable: true,
+        required: true
+      },
+      users: {
+        name: "users",
+        type: "Array[[User](/#the-user-object)]",
+        description: "A list of the group's users",
+        readonly: false,
+        creatable: false,
+        required: false
+      },
+      user_ids: {
+        name: "users",
+        type: "Array[String]",
+        description: "A list of user ids to add to the Group",
+        creatable: true,
+        private: true,
+        readonly: false,
+        required: true
+      },
+      status: {
+        name: "status",
+        type: "String",
+        description: "Indicates the status of the Group. It will be `active` or `deleted`",
+        readonly: true
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the User was created",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the User was last updated",
+        readonly: true
+      },
+      group_url: {
+        name: "group_url",
+        type: "String",
+        description: "The link to the group in the webapp.",
+        readonly: true
+      }
+    }
