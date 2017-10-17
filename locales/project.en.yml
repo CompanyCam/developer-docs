@@ -1,7 +1,7 @@
 ---
 en:
   project:
-    current: true
+    current: false
     resource_article: "a"
     resource_klass: "Project"
     resource_name: "project"
