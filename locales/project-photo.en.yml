@@ -1,13 +1,22 @@
 ---
 en:
-  photo:
+  project-photo:
     current: false
+    skip_resource: true
     resource_article: "a"
+    navigation_title: "Project Photo"
+    use_title: true
     resource_klass: "Photo"
     resource_name: "photo"
     resource_plural: "photos"
-    nested: false
-    disable_create: true
+    parent: "project"
+    nested: true
+    parent_article: "a"
+    parent_plural: "projects"
+    disable_index: true
+    disable_update: true
+    disable_destroy: true
+    disable_show: true
     show_id: "d83n44"
     json: [
       {
