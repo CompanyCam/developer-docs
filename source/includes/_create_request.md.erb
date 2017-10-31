@@ -18,6 +18,7 @@ Creates a new <%= t(".resource_name", scope: resource) %> object.
 <% unless t('.child', scope: resource).to_s.include?("missing") %>
 This endpoint also accepts embedded <%= t(".child", scope: resource) %>s.
 <% end %>
+
 ### Arguments
 
 | Attribute                      | Type          | Description                | Required
@@ -50,6 +51,12 @@ This endpoint also accepts embedded <%= t(".child", scope: resource) %>s.
   <%= columns.join(" | ") %>
 <% end %>
 <% end %>
+
+<% if t('.notes', scope: resource).kind_of?(Hash) && t('.notes', scope: resource).has_key?(:create) %>
+### Notes
+*<%= t('.notes', scope: resource)[:create] %>*
+<% end %>
+
 ### HTTP Request
 <% if t(".nested", scope: resource) %>
 `POST https://api.companycam.com/v2/<%= t(".parent_plural", scope: resource) %>/:<%= t(".parent", scope: resource) %>_id/<%= t(".resource_plural", scope: resource) %>/`

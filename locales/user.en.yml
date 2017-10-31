@@ -11,6 +11,9 @@ en:
     parent_article: "a"
     parent_plural: "companies"
     show_id: "2789583992"
+    notes: {
+      create: "Creating a user will charge the user an additional fee. It is good to inform the user before performing such an action."
+    }
     json: [
       {
         id: "2789583992",
@@ -64,9 +67,7 @@ en:
       create: {
         first_name: "Shawn",
         last_name: "Spencer",
-        email_address: "shawn@psych.com",
-        password: "security123",
-        phone_number: "4025551212"
+        email_address: "shawn@psych.com"
       }
 
     attributes: {
@@ -85,9 +86,10 @@ en:
       email_address: {
         name: "email_address",
         type: "String",
-        description: "",
+        description: "The user's email address. Note: they must be able to receive emails unless a password is provided",
         readonly: true,
         creatable: true,
+        updatable: true,
         required: true
       },
       password: {
@@ -96,7 +98,8 @@ en:
         description: "Must be at least 7 characters",
         private: true,
         creatable: true,
-        required: true
+        updatable: true,
+        required: false
       },
       status: {
         name: "status",
@@ -107,18 +110,18 @@ en:
       first_name: {
         name: "first_name",
         type: "String",
-        description: "",
+        description: "The user's first name",
         updatable: true,
         creatable: true,
-        required: true
+        required: false
       },
       last_name: {
         name: "last_name",
         type: "String",
-        description: "",
+        description: "The user's last name",
         updatable: true,
         creatable: true,
-        required: true
+        required: false
       },
       profile_image: {
         name: "profile_image",
@@ -129,9 +132,10 @@ en:
       phone_number: {
         name: "phone_number",
         type: "String",
-        description: "",
+        description: "The users phone number",
+        creatable: true,
         updatable: true,
-        creatable: true
+        required: false
       },
       role: {
         name: "role",

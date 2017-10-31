@@ -12,7 +12,13 @@ https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/<%= 
 Updates the specified <%= t(".resource_name", scope: resource) %> by setting the values of the parameters passed.
 
 Any parameters not provided will be left unchanged.
-This request accepts the same arguments as the <%= t(".resource_name", scope: resource) %> creation call.
+### Arguments
+
+| Attribute                      | Type          | Description                |
+| ------------------------------ | ------------- | -------------------------- |
+<% t(".attributes", scope: resource).select{ |k,v| v[:updatable] }.each_pair do |key, value| %>
+  **<%= value[:name] %>**<%= " <span class='deprecated'>deprecated</span>" if value[:deprecated] %> | <%= value[:type] %> | <%= value[:description] %>
+<% end %>
 
 ### HTTP Request
 `PUT https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/{<%= t(".resource_plural", scope: resource) %>_id}`

@@ -47,6 +47,7 @@ en:
         description: "The display value of the Tag. Used to display to the user",
         creatable: true,
         required: true,
+        updatable: true,
         readonly: false
       },
       value: {

@@ -47,6 +47,7 @@ en:
           }
         ],
         project_url: "https://app.companycam.com/projects/1234",
+        embedded_project_url: "https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q",
         slug: "QrL2XjgF8P2dN6MPDRdV2Q",
         public: false,
         geofence: null,
@@ -115,19 +116,22 @@ en:
         name: "name",
         type: "String",
         description: "The name of the Project",
-        creatable: true
+        creatable: true,
+        updatable: true
       },
       address: {
         name: "address",
         type: "[Address](/#the-address-object)",
         description: "The physical address of the Project.",
-        creatable: true
+        creatable: true,
+        updatable: true
       },
       coordinates: {
         name: "coordinates",
         type: "[Coordinate](/#the-coordinate-object)",
         description: "The latitude and longitude of the Project.",
-        creatable: true
+        creatable: true,
+        updatable: true
       },
       feature_image: {
         name: "feature_image",
@@ -139,6 +143,12 @@ en:
         name: "project_url",
         type: "String",
         description: "The link to the project in CompanyCam",
+        readonly: true
+      },
+      embedded_project_url: {
+        name: "embedded_project_url",
+        type: "String",
+        description: "The link to an embeddable photo feed for the project.",
         readonly: true
       },
       slug: {
@@ -156,7 +166,8 @@ en:
         name: "geofence",
         type: "Array[[Coordinate](/#the-coordinate-object)]",
         description: "The Project's geofence coordinates that form an enclosing perimeter.",
-        creatable: true
+        creatable: true,
+        updatable: true
       },
       created_at: {
         name: "created_at",

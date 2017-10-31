@@ -96,6 +96,7 @@ en:
         description: "The name of the Group",
         readonly: false,
         creatable: true,
+        updatable: true,
         required: true
       },
       users: {
@@ -113,6 +114,7 @@ en:
         creatable: true,
         private: true,
         readonly: false,
+        updatable: true,
         required: true
       },
       status: {
