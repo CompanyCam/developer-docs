@@ -113,7 +113,7 @@ en:
         description: "The user's first name",
         updatable: true,
         creatable: true,
-        required: false
+        required: true
       },
       last_name: {
         name: "last_name",
@@ -121,7 +121,7 @@ en:
         description: "The user's last name",
         updatable: true,
         creatable: true,
-        required: false
+        required: true
       },
       profile_image: {
         name: "profile_image",
