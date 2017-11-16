@@ -34,6 +34,18 @@ en:
           {
             type: "thumbnail",
             url: "https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg"
+          },
+          {
+            type: "original_annotation",
+            url: "https://static.companycam.com/PDmEK6be15108718182ceadd9danno.jpg"
+          },
+          {
+            type: "web_annotation",
+            url: "https://static.companycam.com/PDmEK6be15108718182ceadd9danno-web.jpg"
+          },
+          {
+            type: "thumbnail_annotation",
+            url: "https://static.companycam.com/PDmEK6be15108718182ceadd9danno-small.jpg"
           }
         ],
         hash: "00ab337b7399151e5d4aa3bd4226e8dd",
@@ -101,6 +113,13 @@ en:
         filterable: "Either `active` or `deleted`. If empty all projects will be returned.",
         readonly: true
       },
+      status: {
+        name: "processing_status",
+        type: "String",
+        description: "Indicates the Photo's processing status. It will one of `pending`, `processing`, `processed`, `processing_error`, or `duplicate`",
+        filterable: "Either `active` or `deleted`. If empty all projects will be returned.",
+        readonly: true
+      },
       coordinates: {
         name: "coordinates",
         type: "[Coordinate](/#the-coordinate-object)",
@@ -111,7 +130,7 @@ en:
       uris: {
         name: "uris",
         type: "Array[[ImageURI](/#the-imageuri-object)]",
-        description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`.",
+        description: "A list of images for the different variants of the Project's feature image. Will have entries for `original`, `web`, and `thumbnail`. If the image has been annotated it will contain entries for `original_annotation`, `web_annotation`, and `thumbnail_annotation`.",
         readonly: true
       },
       hash: {
