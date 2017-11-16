@@ -1505,9 +1505,9 @@ https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&
 <td>true</td>
 </tr>
 <tr>
-<td><strong>status</strong></td>
+<td><strong>processing_status</strong></td>
 <td>String</td>
-<td>Indicates the status of the Photo. It will be <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code></td>
+<td>Indicates the Photo&rsquo;s processing status. It will one of <code class="prettyprint">pending</code>, <code class="prettyprint">processing</code>, <code class="prettyprint">processed</code>, <code class="prettyprint">processing_error</code>, or <code class="prettyprint">duplicate</code></td>
 <td>true</td>
 </tr>
 <tr>
@@ -1519,7 +1519,7 @@ https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&
 <tr>
 <td><strong>uris</strong></td>
 <td>Array[<a href="/#the-imageuri-object">ImageURI</a>]</td>
-<td>A list of images for the different variants of the Project&rsquo;s feature image. Will have entries for <code class="prettyprint">original</code>, <code class="prettyprint">web</code>, and <code class="prettyprint">thumbnail</code>.</td>
+<td>A list of images for the different variants of the Project&rsquo;s feature image. Will have entries for <code class="prettyprint">original</code>, <code class="prettyprint">web</code>, and <code class="prettyprint">thumbnail</code>. If the image has been annotated it will contain entries for <code class="prettyprint">original_annotation</code>, <code class="prettyprint">web_annotation</code>, and <code class="prettyprint">thumbnail_annotation</code>.</td>
 <td>true</td>
 </tr>
 <tr>
@@ -1589,6 +1589,18 @@ https://api.companycam.com/v2/photos/
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
         </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original_annotation&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/PDmEK6be15108718182ceadd9danno.jpg&quot;</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web_annotation&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/PDmEK6be15108718182ceadd9danno-web.jpg&quot;</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail_annotation&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/PDmEK6be15108718182ceadd9danno-small.jpg&quot;</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
@@ -1620,7 +1632,7 @@ https://api.companycam.com/v2/photos/
 <td>used for pagination (default is 1)</td>
 </tr>
 <tr>
-<td><strong>status</strong></td>
+<td><strong>processing_status</strong></td>
 <td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty all projects will be returned.</td>
 </tr>
 <tr>
@@ -1681,6 +1693,18 @@ https://api.companycam.com/v2/photos/8392884992
     </span><span class="p">{</span><span class="w">
       </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
       </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original_annotation&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/PDmEK6be15108718182ceadd9danno.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web_annotation&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/PDmEK6be15108718182ceadd9danno-web.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail_annotation&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/PDmEK6be15108718182ceadd9danno-small.jpg&quot;</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
