@@ -192,5 +192,11 @@ en:
         type: "String",
         filterable: "Pass a value to search by the projects `name` and `street_address_1`",
         private: true
+      },
+      modified_since: {
+        name: "modified_since",
+        type: "String",
+        filterable: "Pass an ISO8601 formatted date to return projects modified on or after the provided value.",
+        private: true
       }
     }
