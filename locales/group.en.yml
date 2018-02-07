@@ -40,24 +40,6 @@ en:
               }
             ],
             phone_number: "4025551212",
-            role: {
-              id: "2789382",
-              name: "Admin",
-              permissions: [
-                {
-                  title: "Modify user accounts",
-                  value: 1
-                },
-                {
-                  title: "Delete user accounts",
-                  value: 2
-                },
-                {
-                  title: "Move company photos",
-                  value: 8
-                }
-              ]
-            },
             user_url: "https://app.companycam.com/users/1234",
             created_at: 1490737206,
             updated_at: 1490737744
