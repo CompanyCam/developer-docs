@@ -123,10 +123,10 @@
       <div class="content">
         <h1 id="companycam-api">CompanyCam API</h1>
 
-<p>CompanyCam helps companies manage field work with smart photos.</p>
+<p>CompanyCam helps companies manage field work with smart photos.</p>
 
-<p>If anything is missing or seems incorrect, please check the <a href="https://github.com/CompanyCam/api-docs/issues">GitHub issues</a>
-for existing known issues or <a href="https://github.com/CompanyCam/api-docs/issues/new">create a new issue</a>.</p>
+<p>If anything is missing or seems incorrect, please check the <a href="https://github.com/CompanyCam/developer-docs/issues">GitHub issues</a>
+for existing known issues or <a href="https://github.com/CompanyCam/developer-docs/issues/new">create a new issue</a>.</p>
 
 <h1 id="authentication">Authentication</h1>
 
@@ -136,6 +136,7 @@ for existing known issues or <a href="https://github.com/CompanyCam/api-docs/iss
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"https://api.companycam.com/v2/"</span>
   -H <span class="s2">"Authorization: Bearer &lt;ACCESS_TOKEN&gt;"</span>
+  -H <span class="s2">"X-CompanyCam-Secret: &lt;SECRET_KEY&gt;"</span>
   -H <span class="s2">"X-CompanyCam-User: &lt;USER_EMAIL&gt;"</span>
 </code></pre>
 
@@ -147,6 +148,10 @@ curl <span class="s2">"https://api.companycam.com/v2/"</span>
 
 <p><code class="prettyprint">Authorization: Bearer &lt;ACCESS_TOKEN&gt;</code></p>
 
+<p>You must also include your app&rsquo;s secret key:</p>
+
+<p><code class="prettyprint">X-CompanyCam-Secret: &lt;SECRET_KEY&gt;</code></p>
+
 <p>When possible you should set the user&rsquo;s email address performing the action in your app in a header that looks like the following:
 <code class="prettyprint">X-CompanyCam-User: &lt;USER_EMAIL&gt;</code></p>
 
@@ -155,6 +160,7 @@ curl <span class="s2">"https://api.companycam.com/v2/"</span>
 <aside class="notice">
 <br />
 You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key. <br />
+You must replace <code>&lt;SECRET_KEY&gt;</code> with your app&rsquo;s secret key. <br />
 You should replace <code>&lt;USER_EMAIL&gt;</code> with the user&rsquo;s email address.
 </aside>
 
