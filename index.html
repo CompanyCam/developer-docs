@@ -1386,6 +1386,52 @@ https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&
 
 <p><code class="prettyprint">POST https://api.companycam.com/v2/projects/:project_id/photos/</code></p>
 
+          <h1 id="project-photo-tags">Project Photo Tags</h1>
+
+<p>This is an object representing a tag of a project. Projects can
+  have multiple photos/tags but a tag object belongs to only one
+  Project.</p>
+
+<p><h2 id="list-all-photos-tags">List all photos/tags</h2>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/projects/:project_id/photos/tags/
+</code></pre>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48892885&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;display_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Front Side&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;front size&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></p>
+
+<p>Returns a list of photos/tags you’ve previously created. The photos/tags are returned in sorted order, with the most recent photos/tags appearing first.</p>
+
+<h3 id="filters">Filters</h3>
+
+<table><thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>per_page</strong></td>
+<td>used for pagination (default is 25)</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>used for pagination (default is 1)</td>
+</tr>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request:</h3>
+
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos/tags</code></p>
+
           <h1 id="photo">Photo</h1>
 
 <p>This is an object representing a photo.</p>
