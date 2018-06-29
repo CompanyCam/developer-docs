@@ -11,6 +11,11 @@ en:
     parent_article: "a"
     parent_plural: "companies"
     show_id: "94772883"
+    nonrestful_actions:
+      - path: restore
+        method: PUT
+        link_text: Restore project
+        description: Restores a project so that it will show in the app
     json: [
       {
         id: "94772883",

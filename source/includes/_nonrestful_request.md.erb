@@ -1,0 +1,15 @@
+## <%= action_map[:link_text] %>
+
+```shell
+curl -X <%= action_map[:method] %> -H "Content-type: application/json" -H "Authorization: Bearer <ACCESS_TOKEN>"
+https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/<%= t(".show_id", scope: resource) %>/<%= action_map[:path] %>
+```
+
+```json
+<%= json_single %>
+```
+
+<%= action_map[:description] %>
+
+### HTTP Request
+`<%= action_map[:method] %> https://api.companycam.com/v2/<%= t(".resource_plural", scope: resource) %>/{<%= t(".resource_name", scope: resource) %>_id}/<%= action_map[:path] %>`
