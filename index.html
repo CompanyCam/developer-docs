@@ -425,6 +425,8 @@ https://api.companycam.com/v2/companies/8292212
 
 <p><code class="prettyprint">GET https://api.companycam.com/v2/companies/{company_id}</code></p>
 
+<p>false</p>
+
           <h1 id="user">User</h1>
 
 <p>This is an object representing a user of a company. Companies can
@@ -798,6 +800,8 @@ https://api.companycam.com/v2/users/current
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">GET https://api.companycam.com/v2/users/current</code></p>
+
+<p>false</p>
 
           <h1 id="project">Project</h1>
 
@@ -1216,6 +1220,61 @@ https://api.companycam.com/v2/projects/94772883
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/projects/{project_id}/</code></p>
 
+<p>true
+    <h2 id="restore-project">Restore project</h2>
+<pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/projects/94772883/restore
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Psych Office&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;street_address_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2756 O&#39;Hara Lane&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;street_address_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Santa Barbara&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CA&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;postal_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;93101&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;US&quot;</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-119.712367</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">&quot;feature_image&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;embedded_project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1395792000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></p>
+
+<p>Restores a project so that it will show in the app</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT https://api.companycam.com/v2/projects/{project_id}/restore</code></p>
+
           <h1 id="project-photo">Project Photo</h1>
 
 <p>This is an object representing a photo of a project. Projects can
@@ -1386,6 +1445,8 @@ https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&
 
 <p><code class="prettyprint">POST https://api.companycam.com/v2/projects/:project_id/photos/</code></p>
 
+<p>false</p>
+
           <h1 id="project-photo-tags">Project Photo Tags</h1>
 
 <p>This is an object representing a tag of a project. Projects can
@@ -1431,6 +1492,8 @@ https://api.companycam.com/v2/projects/:project_id/photos/tags/
 <h3 id="http-request">HTTP Request:</h3>
 
 <p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos/tags</code></p>
+
+<p>false</p>
 
           <h1 id="photo">Photo</h1>
 
@@ -1747,6 +1810,8 @@ https://api.companycam.com/v2/photos/8392884992
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/photos/{photo_id}/</code></p>
 
+<p>false</p>
+
           <h1 id="group">Group</h1>
 
 <p>This is an object representing a group of a company. Companies can
@@ -2061,6 +2126,8 @@ https://api.companycam.com/v2/groups/3992883
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/groups/{group_id}/</code></p>
 
+<p>false</p>
+
           <h1 id="tag">Tag</h1>
 
 <p>This is an object representing a tag of a company. Companies can
@@ -2264,6 +2331,8 @@ https://api.companycam.com/v2/tags/48892885
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/tags/{tag_id}/</code></p>
+
+<p>false</p>
 
 
           <h1 id="types">Types</h1>
