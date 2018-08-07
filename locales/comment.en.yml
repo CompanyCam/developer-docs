@@ -33,7 +33,7 @@ en:
     ]
     gecko:
       create: {
-        content: 'This is a new comment'
+        content: 'Have you seen this yet?'
       }
 
     attributes: {
