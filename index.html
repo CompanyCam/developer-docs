@@ -1812,6 +1812,94 @@ https://api.companycam.com/v2/photos/8392884992
 
 <p>false</p>
 
+          <h1 id="comment">Comment</h1>
+
+<p>This is an object representing a comment of a photo. Photos can
+  have multiple comments but a comment object belongs to only one
+  Photo.</p>
+
+<p><h2 id="list-all-comments">List all comments</h2>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/photos/:photo_id/comments/
+</code></pre>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;commentable_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;388472672&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;commentable_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Have you seen this yet?&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></p>
+
+<p>Returns a list of comments you’ve previously created. The comments are returned in sorted order, with the most recent comments appearing first.</p>
+
+<h3 id="filters">Filters</h3>
+
+<table><thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>per_page</strong></td>
+<td>used for pagination (default is 25)</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>used for pagination (default is 1)</td>
+</tr>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request:</h3>
+
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/photos/{photo_id}/comments</code></p>
+
+<p><h2 id="create-a-new-comment">Create a new comment</h2>
+<pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/photos/:photo_id/comments/ -d <span class="s1">&#39;{&quot;comment&quot;:{&quot;content&quot;:&quot;This is a new comment&quot;}&#39;</span><span class="o">}</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;commentable_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;388472672&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;commentable_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Have you seen this yet?&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></p>
+
+<p>Creates a new comment object.</p>
+
+<h3 id="arguments">Arguments</h3>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://api.companycam.com/v2/photos/:photo_id/comments/</code></p>
+
+<p>false</p>
+
           <h1 id="group">Group</h1>
 
 <p>This is an object representing a group of a company. Companies can
