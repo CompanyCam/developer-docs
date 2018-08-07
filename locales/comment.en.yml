@@ -46,7 +46,8 @@ en:
       content: {
         name: "content",
         type: "String",
-        description: "The text of the Comment."
+        description: "The text of the Comment.",
+        creatable: true
       },
       creator_id: {
         name: "creator_id",
