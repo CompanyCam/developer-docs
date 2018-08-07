@@ -23,7 +23,7 @@ en:
         creator_id: "2789583992",
         creator_type: "User",
         commentable_id: "388472672",
-        commentable_type: 'Image',
+        commentable_type: 'Photo',
         creator_name: "Shawn Spencer",
         status: "active",
         content: "Have you seen this yet?",
@@ -42,6 +42,11 @@ en:
         type: "String",
         description: "A unique identifier for the Comment.",
         readonly: true
+      },
+      content: {
+        name: "content",
+        type: "String",
+        description: "The text of the Comment."
       },
       creator_id: {
         name: "creator_id",
