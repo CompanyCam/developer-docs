@@ -1,0 +1,94 @@
+---
+en:
+  comment:
+    current: false
+    skip_resource: true
+    resource_article: "a"
+    navigation_title: "Comment"
+    use_title: true
+    resource_klass: "Comment"
+    resource_name: "comment"
+    resource_plural: "comments"
+    parent: "photo"
+    nested: true
+    parent_article: "a"
+    parent_plural: "photos"
+    disable_update: true
+    disable_destroy: true
+    disable_show: true
+    show_id: "4782987471"
+    json: [
+      {
+        id: "4782987471",
+        creator_id: "2789583992",
+        creator_type: "User",
+        commentable_id: "388472672",
+        commentable_type: 'Image',
+        creator_name: "Shawn Spencer",
+        status: "active",
+        content: "Have you seen this yet?",
+        created_at: 1152230608,
+        updated_at: 1152230400
+      }
+    ]
+    gecko:
+      create: {
+        content: 'This is a new comment'
+      }
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "String",
+        description: "A unique identifier for the Comment.",
+        readonly: true
+      },
+      creator_id: {
+        name: "creator_id",
+        type: "String",
+        description: "The id of the creator that made the Comment.",
+        readonly: true
+      },
+      creator_type: {
+        name: "creator_type",
+        type: "String",
+        description: "The type of entity that made this comment.",
+        readonly: true
+      },
+      commentable_id: {
+        name: "commentable_id",
+        type: "String",
+        description: "The id of the entity that was commented on.",
+        readonly: true
+      },
+      commentable_type: {
+        name: "commentable_type",
+        type: "String",
+        description: "The type of entity that was commented on.",
+        readonly: true
+      },
+      creator_name: {
+        name: "creator_name",
+        type: "String",
+        description: "The display name of the entity that made the comment.",
+        readonly: true
+      },
+      status: {
+        name: "status",
+        type: "String",
+        description: "Indicates the status of the Comment. It will be `active` or `deleted`",
+        readonly: true
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Comment was created on the server.",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Comment was last update.",
+        readonly: true
+      }
+    }
