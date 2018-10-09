@@ -425,8 +425,6 @@ https://api.companycam.com/v2/companies/8292212
 
 <p><code class="prettyprint">GET https://api.companycam.com/v2/companies/{company_id}</code></p>
 
-<p>false</p>
-
           <h1 id="user">User</h1>
 
 <p>This is an object representing a user of a company. Companies can
@@ -800,8 +798,6 @@ https://api.companycam.com/v2/users/current
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">GET https://api.companycam.com/v2/users/current</code></p>
-
-<p>false</p>
 
           <h1 id="project">Project</h1>
 
@@ -1220,8 +1216,7 @@ https://api.companycam.com/v2/projects/94772883
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/projects/{project_id}/</code></p>
 
-<p>true
-    <h2 id="restore-project">Restore project</h2>
+<p><h2 id="restore-project">Restore project</h2>
 <pre class="highlight shell"><code>curl -X PUT -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
 https://api.companycam.com/v2/projects/94772883/restore
 </code></pre>
@@ -1274,226 +1269,6 @@ https://api.companycam.com/v2/projects/94772883/restore
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">PUT https://api.companycam.com/v2/projects/{project_id}/restore</code></p>
-
-          <h1 id="project-photo">Project Photo</h1>
-
-<p>This is an object representing a photo of a project. Projects can
-  have multiple photos but a photo object belongs to only one
-  Project.</p>
-
-<p><h2 id="list-all-photos">List all photos</h2>
-<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/:project_id/photos/
-</code></pre>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-119.712367</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">&quot;uris&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262.jpg&quot;</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg&quot;</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
-        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></p>
-
-<p>Returns a list of photos you’ve previously created. The photos are returned in sorted order, with the most recent photos appearing first.</p>
-
-<h3 id="filters">Filters</h3>
-
-<table><thead>
-<tr>
-<th>Arguments</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>per_page</strong></td>
-<td>used for pagination (default is 25)</td>
-</tr>
-<tr>
-<td><strong>page</strong></td>
-<td>used for pagination (default is 1)</td>
-</tr>
-<tr>
-<td><strong>status</strong></td>
-<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty all projects will be returned.</td>
-</tr>
-<tr>
-<td><strong>start_date</strong></td>
-<td>The timestamp of the earliest date a photo was taken</td>
-</tr>
-<tr>
-<td><strong>end_date</strong></td>
-<td>The timestamp of the latest date a photo was taken</td>
-</tr>
-<tr>
-<td><strong>user_ids</strong></td>
-<td>An array of user ids that captured a photo</td>
-</tr>
-<tr>
-<td><strong>group_ids</strong></td>
-<td>An array of group ids that a member of captured a photo</td>
-</tr>
-<tr>
-<td><strong>tag_ids</strong></td>
-<td>An array of tag ids that the photo should be tagged with</td>
-</tr>
-</tbody></table>
-
-<h3 id="http-request">HTTP Request:</h3>
-
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos</code></p>
-
-<p><h2 id="create-a-new-photo">Create a new photo</h2>
-<pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&#39;{&quot;photo&quot;:{&quot;uri&quot;:&quot;https://your-image-url.jpg&quot;,&quot;coordinates&quot;:{&quot;lat&quot;:34.398307,&quot;lon&quot;:-119.712367},&quot;captured_at&quot;:1152230396}&#39;</span><span class="o">}</span>
-</code></pre>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-119.712367</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">&quot;uris&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262.jpg&quot;</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg&quot;</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
-  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></p>
-
-<p>Creates a new photo object.</p>
-
-<h3 id="arguments">Arguments</h3>
-
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>coordinates</strong></td>
-<td><a href="/#the-coordinate-object">Coordinate</a></td>
-<td>The latitude and longitude of the Project.</td>
-<td>true</td>
-</tr>
-<tr>
-<td><strong>uri</strong></td>
-<td>String</td>
-<td>The URI to the photo you wish to upload.</td>
-<td>true</td>
-</tr>
-<tr>
-<td><strong>captured_at</strong></td>
-<td>Integer</td>
-<td>Timestamp when the Photo was taken by the User.</td>
-<td>true</td>
-</tr>
-</tbody></table>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">POST https://api.companycam.com/v2/projects/:project_id/photos/</code></p>
-
-<p>false</p>
-
-          <h1 id="project-photo-tags">Project Photo Tags</h1>
-
-<p>This is an object representing a tag of a project. Projects can
-  have multiple photos/tags but a tag object belongs to only one
-  Project.</p>
-
-<p><h2 id="list-all-photos-tags">List all photos/tags</h2>
-<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
-https://api.companycam.com/v2/projects/:project_id/photos/tags/
-</code></pre>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48892885&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;display_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Front Side&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;front size&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
-    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></p>
-
-<p>Returns a list of photos/tags you’ve previously created. The photos/tags are returned in sorted order, with the most recent photos/tags appearing first.</p>
-
-<h3 id="filters">Filters</h3>
-
-<table><thead>
-<tr>
-<th>Arguments</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>per_page</strong></td>
-<td>used for pagination (default is 25)</td>
-</tr>
-<tr>
-<td><strong>page</strong></td>
-<td>used for pagination (default is 1)</td>
-</tr>
-</tbody></table>
-
-<h3 id="http-request">HTTP Request:</h3>
-
-<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos/tags</code></p>
-
-<p>false</p>
 
           <h1 id="photo">Photo</h1>
 
@@ -1810,7 +1585,387 @@ https://api.companycam.com/v2/photos/8392884992
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/photos/{photo_id}/</code></p>
 
-<p>false</p>
+          <h1 id="document">Document</h1>
+
+<p>This is an object representing a document.</p>
+
+<h2 id="the-document-object">The Document object</h2>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+<th>Readonly</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>String</td>
+<td>A unique identifier for the Document.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>company_id</strong></td>
+<td>String</td>
+<td>A unique identifier for the Company the Document belongs to.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>creator_id</strong></td>
+<td>String</td>
+<td>The id of the entity that uploaded this Document.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>creator_type</strong></td>
+<td>String</td>
+<td>The type of entity that created this Document.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>creator_name</strong></td>
+<td>String</td>
+<td>The display name of the entity that created the Document.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>project_id</strong></td>
+<td>String</td>
+<td>The id of the Project this Document was uploaded to.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>The display name of the document</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>byte_size</strong></td>
+<td>Integer</td>
+<td>The size of the document in bytes.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>url</strong></td>
+<td>String</td>
+<td>The URL where the document can be found.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>content_type</strong></td>
+<td>String</td>
+<td>The content/mime type of the document</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>created_at</strong></td>
+<td>Integer</td>
+<td>Timestamp when the Document was created on the server.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>updated_at</strong></td>
+<td>Integer</td>
+<td>Timestamp when the Document was last update.</td>
+<td>true</td>
+</tr>
+</tbody></table>
+
+<p><h2 id="retrieve-a-particular-document">Retrieve a particular document</h2>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/documents/8392884992
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8392884992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test.pdf&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/8/test.pdf&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;byte_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1993828</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;content_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></p>
+
+<p>Retrieves the details of an existing document. You need only supply the unique document identifier that was returned upon document creation.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://api.companycam.com/v2/documents/{document_id}</code></p>
+
+          <h1 id="project-photo">Project Photo</h1>
+
+<p>This is an object representing a photo of a project. Projects can
+  have multiple photos but a photo object belongs to only one
+  Project.</p>
+
+<p><h2 id="list-all-photos">List all photos</h2>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/projects/:project_id/photos/
+</code></pre>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-119.712367</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">&quot;uris&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262.jpg&quot;</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg&quot;</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></p>
+
+<p>Returns a list of photos you’ve previously created. The photos are returned in sorted order, with the most recent photos appearing first.</p>
+
+<h3 id="filters">Filters</h3>
+
+<table><thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>per_page</strong></td>
+<td>used for pagination (default is 25)</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>used for pagination (default is 1)</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty all projects will be returned.</td>
+</tr>
+<tr>
+<td><strong>start_date</strong></td>
+<td>The timestamp of the earliest date a photo was taken</td>
+</tr>
+<tr>
+<td><strong>end_date</strong></td>
+<td>The timestamp of the latest date a photo was taken</td>
+</tr>
+<tr>
+<td><strong>user_ids</strong></td>
+<td>An array of user ids that captured a photo</td>
+</tr>
+<tr>
+<td><strong>group_ids</strong></td>
+<td>An array of group ids that a member of captured a photo</td>
+</tr>
+<tr>
+<td><strong>tag_ids</strong></td>
+<td>An array of tag ids that the photo should be tagged with</td>
+</tr>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request:</h3>
+
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos</code></p>
+
+<p><h2 id="create-a-new-photo">Create a new photo</h2>
+<pre class="highlight shell"><code>curl -X POST -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/projects/:project_id/photos/ -d <span class="s1">&#39;{&quot;photo&quot;:{&quot;uri&quot;:&quot;https://your-image-url.jpg&quot;,&quot;coordinates&quot;:{&quot;lat&quot;:34.398307,&quot;lon&quot;:-119.712367},&quot;captured_at&quot;:1152230396}&#39;</span><span class="o">}</span>
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">34.398307</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-119.712367</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">&quot;uris&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;original&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262web.jpg&quot;</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/VuS0rPvrnNA1490797262small.jpg&quot;</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00ab337b7399151e5d4aa3bd4226e8dd&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;photo_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/photos/8675309&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;captured_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230396</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></p>
+
+<p>Creates a new photo object.</p>
+
+<h3 id="arguments">Arguments</h3>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>coordinates</strong></td>
+<td><a href="/#the-coordinate-object">Coordinate</a></td>
+<td>The latitude and longitude of the Project.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>uri</strong></td>
+<td>String</td>
+<td>The URI to the photo you wish to upload.</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>captured_at</strong></td>
+<td>Integer</td>
+<td>Timestamp when the Photo was taken by the User.</td>
+<td>true</td>
+</tr>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://api.companycam.com/v2/projects/:project_id/photos/</code></p>
+
+          <h1 id="project-photo-tags">Project Photo Tags</h1>
+
+<p>This is an object representing a tag of a project. Projects can
+  have multiple photos/tags but a tag object belongs to only one
+  Project.</p>
+
+<p><h2 id="list-all-photos-tags">List all photos/tags</h2>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/projects/:project_id/photos/tags/
+</code></pre>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;48892885&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;display_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Front Side&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;front size&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></p>
+
+<p>Returns a list of photos/tags you’ve previously created. The photos/tags are returned in sorted order, with the most recent photos/tags appearing first.</p>
+
+<h3 id="filters">Filters</h3>
+
+<table><thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>per_page</strong></td>
+<td>used for pagination (default is 25)</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>used for pagination (default is 1)</td>
+</tr>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request:</h3>
+
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/photos/tags</code></p>
+
+          <h1 id="project-document">Project Document</h1>
+
+<p>This is an object representing a document of a project. Projects can
+  have multiple documents but a document object belongs to only one
+  Project.</p>
+
+<p><h2 id="list-all-documents">List all documents</h2>
+<pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span>
+https://api.companycam.com/v2/projects/:project_id/documents/
+</code></pre>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4782987471&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;company_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8292212&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2789583992&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;creator_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shawn Spencer&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94772883&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test.pdf&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://static.companycam.com/8/test.pdf&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;byte_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1993828</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;content_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230608</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></p>
+
+<p>Returns a list of documents you’ve previously created. The documents are returned in sorted order, with the most recent documents appearing first.</p>
+
+<h3 id="filters">Filters</h3>
+
+<table><thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>per_page</strong></td>
+<td>used for pagination (default is 25)</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>used for pagination (default is 1)</td>
+</tr>
+</tbody></table>
+
+<h3 id="http-request">HTTP Request:</h3>
+
+<p><code class="prettyprint">GET  https://api.companycam.com/v2/projects/{project_id}/documents</code></p>
 
           <h1 id="comment">Comment</h1>
 
@@ -1903,8 +2058,6 @@ https://api.companycam.com/v2/photos/:photo_id/comments/ -d <span class="s1">&#3
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">POST https://api.companycam.com/v2/photos/:photo_id/comments/</code></p>
-
-<p>false</p>
 
           <h1 id="group">Group</h1>
 
@@ -2220,8 +2373,6 @@ https://api.companycam.com/v2/groups/3992883
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/groups/{group_id}/</code></p>
 
-<p>false</p>
-
           <h1 id="tag">Tag</h1>
 
 <p>This is an object representing a tag of a company. Companies can
@@ -2425,8 +2576,6 @@ https://api.companycam.com/v2/tags/48892885
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">DELETE https://api.companycam.com/v2/tags/{tag_id}/</code></p>
-
-<p>false</p>
 
 
           <h1 id="types">Types</h1>
