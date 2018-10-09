@@ -51,7 +51,6 @@
   <%= partial "includes/current_request", locals: { resource: resource, json_single: json_single }  %>
 <% end %>
 
-<%= t(resource).keys.include?(:nonrestful_actions) %>
 <% if t(resource).keys.include?(:nonrestful_actions) %>
   <% t('.nonrestful_actions', scope: resource).each do |action_map| %>
     <%= partial "includes/nonrestful_request", locals: { resource: resource, json_single: json_single, action_map: action_map }  %>

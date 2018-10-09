@@ -1,0 +1,105 @@
+---
+en:
+  document:
+    current: false
+    resource_article: "a"
+    resource_klass: "Document"
+    resource_name: "document"
+    resource_plural: "documents"
+    nested: false
+    disable_index: true
+    disable_create: true
+    disable_update: true
+    disable_destroy: true
+    show_id: "8392884992"
+    json: [
+      {
+        id: "8392884992",
+        company_id: "8292212",
+        creator_id: "2789583992",
+        creator_type: "User",
+        creator_name: "Shawn Spencer",
+        project_id: "94772883",
+        name: "test.pdf",
+        url: "https://static.companycam.com/8/test.pdf",
+        byte_size: 1993828,
+        content_type: "application/pdf",
+        created_at: 1152230608,
+        updated_at: 1152230400
+      }
+    ]
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "String",
+        description: "A unique identifier for the Document.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "String",
+        description: "A unique identifier for the Company the Document belongs to.",
+        readonly: true,
+      },
+      creator_id: {
+        name: "creator_id",
+        type: "String",
+        description: "The id of the entity that uploaded this Document.",
+        readonly: true
+      },
+      creator_type: {
+        name: "creator_type",
+        type: "String",
+        description: "The type of entity that created this Document.",
+        readonly: true
+      },
+      creator_name: {
+        name: "creator_name",
+        type: "String",
+        description: "The display name of the entity that created the Document.",
+        readonly: true
+      },
+      project_id: {
+        name: "project_id",
+        type: "String",
+        description: "The id of the Project this Document was uploaded to.",
+        readonly: true
+      },
+      status: {
+        name: "name",
+        type: "String",
+        description: "The display name of the document",
+        readonly: true
+      },
+      byte_size: {
+        name: "byte_size",
+        type: "Integer",
+        description: "The size of the document in bytes.",
+        readonly: true
+      },
+      url: {
+        name: "url",
+        type: "String",
+        description: "The URL where the document can be found.",
+        readonly: true
+      },
+      content_type: {
+        name: "content_type",
+        type: "String",
+        description: "The content/mime type of the document",
+        readonly: true
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Document was created on the server.",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Document was last update.",
+        readonly: true
+      }
+    }
