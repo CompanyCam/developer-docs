@@ -12,7 +12,6 @@ includes:
   - errors
 
 asides:
-  - getting_an_access_token
   - making_an_api_call
   - pagination
   - soft-deletion
@@ -47,41 +46,6 @@ CompanyCam helps companies manage field work with smart photos.
 
 If anything is missing or seems incorrect, please check the [GitHub issues](https://github.com/CompanyCam/developer-docs/issues)
 for existing known issues or [create a new issue](https://github.com/CompanyCam/developer-docs/issues/new).
-
-# Authentication
-
-> To authorize, use this code:
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "https://api.companycam.com/v2/"
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
-  -H "X-CompanyCam-Secret: <SECRET_KEY>"
-  -H "X-CompanyCam-User: <USER_EMAIL>"
-```
-
-> Make sure to replace `<ACCESS_TOKEN>` with your API key.
-
-CompanyCam expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: Bearer <ACCESS_TOKEN>`
-
-You must also include your app's secret key:
-
-`X-CompanyCam-Secret: <SECRET_KEY>`
-
-When possible you should set the user's email address performing the action in your app in a header that looks like the following:
-`X-CompanyCam-User: <USER_EMAIL>`
-
-If the email address is not provided it will use the email address of the user that configured the integration.
-
-
-<aside class="notice">
-<br />
-You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key. <br />
-You must replace <code>&lt;SECRET_KEY&gt;</code> with your app's secret key. <br />
-You should replace <code>&lt;USER_EMAIL&gt;</code> with the user's email address.
-</aside>
 
 <%= partial "includes/getting_started" %>
 <%= partial "includes/errors" %>

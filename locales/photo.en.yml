@@ -110,14 +110,14 @@ en:
         name: "status",
         type: "String",
         description: "Indicates the status of the Photo. It will be `active` or `deleted`",
-        filterable: "Either `active` or `deleted`. If empty all projects will be returned.",
+        filterable: "Either `active` or `deleted`. If empty `active` photos will be returned.",
         readonly: true
       },
       status: {
         name: "processing_status",
         type: "String",
         description: "Indicates the Photo's processing status. It will one of `pending`, `processing`, `processed`, `processing_error`, or `duplicate`",
-        filterable: "Either `active` or `deleted`. If empty all projects will be returned.",
+        filterable: "Either `active` or `deleted`. If empty `processed` photos will be returned.",
         readonly: true
       },
       coordinates: {

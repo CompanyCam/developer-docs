@@ -82,6 +82,7 @@ under the License.
       <div class="dark-box"></div>
       <div class="content">
         <%= yield %>
+        <%= partial "includes/authentication" %>
         <% current_page.data.resources && current_page.data.resources.each do |resource| %>
           <%= partial "includes/resource", locals: { resource: resource } %>
         <% end %>
