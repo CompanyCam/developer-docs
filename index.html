@@ -128,64 +128,7 @@
 <p>If anything is missing or seems incorrect, please check the <a href="https://github.com/CompanyCam/developer-docs/issues">GitHub issues</a>
 for existing known issues or <a href="https://github.com/CompanyCam/developer-docs/issues/new">create a new issue</a>.</p>
 
-<h1 id="authentication">Authentication</h1>
-
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"https://api.companycam.com/v2/"</span>
-  -H <span class="s2">"Authorization: Bearer &lt;ACCESS_TOKEN&gt;"</span>
-  -H <span class="s2">"X-CompanyCam-Secret: &lt;SECRET_KEY&gt;"</span>
-  -H <span class="s2">"X-CompanyCam-User: &lt;USER_EMAIL&gt;"</span>
-</code></pre>
-
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">&lt;ACCESS_TOKEN&gt;</code> with your API key.</p>
-</blockquote>
-
-<p>CompanyCam expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: Bearer &lt;ACCESS_TOKEN&gt;</code></p>
-
-<p>You must also include your app&rsquo;s secret key:</p>
-
-<p><code class="prettyprint">X-CompanyCam-Secret: &lt;SECRET_KEY&gt;</code></p>
-
-<p>When possible you should set the user&rsquo;s email address performing the action in your app in a header that looks like the following:
-<code class="prettyprint">X-CompanyCam-User: &lt;USER_EMAIL&gt;</code></p>
-
-<p>If the email address is not provided it will use the email address of the user that configured the integration.</p>
-
-<aside class="notice">
-<br />
-You must replace <code>&lt;ACCESS_TOKEN&gt;</code> with your personal API key. <br />
-You must replace <code>&lt;SECRET_KEY&gt;</code> with your app&rsquo;s secret key. <br />
-You should replace <code>&lt;USER_EMAIL&gt;</code> with the user&rsquo;s email address.
-</aside>
-
 <h1 id="getting-started">Getting Started</h1>
-
-<p><h2 id="getting-an-access-token">Getting an Access Token</h2></p>
-
-<p>The user can generate a new access token in CompanyCam as long as they have sufficient privileges. Users can generate as many access tokens as they wish. The generated access token will be use in the <a href="/#authentication">Authorization header</a></p>
-
-<blockquote>
-<p>To validate an Access Token, use this code:</p>
-</blockquote>
-
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl -X POST <span class="s2">"https://api.companycam.com/v2/access_tokens/{token}/verify"</span>
-</code></pre>
-
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Token not found"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 
 <p><h2 id="making-an-api-call">Making an API call</h2>
 <pre class="highlight shell"><code>curl -X GET -H <span class="s2">&quot;Content-type: application/json&quot;</span> -H <span class="s2">&quot;Authorization: Bearer &lt;ACCESS_TOKEN&gt;&quot;</span> -H <span class="s2">&quot;X-CompanyCam-User: shawn@psych.com&quot;</span>
@@ -195,7 +138,7 @@ https://api.companycam.com/v2/
 <p>The CompanyCam API is entirely JSON based. In order to make an authenticated call
 to the API, you must include your access token with the call.
 CompanyCam uses a BEARER token that is passed along in an Authorization
-header. You should whenever possible set the <code class="prettyprint">X-CompanyCam-User</code> HTTP header to the email address of the user performing the action. This email must match the user&rsquo;s email address in CompanyCam. If the <code class="prettyprint">X-CompanyCam-User</code> header is not provided it will fallback to using the user that setup the integration.</p>
+header. You should whenever possible set the <code class="prettyprint">X-CompanyCam-User</code> HTTP header to the email address of the user performing the action. This email must match the user&rsquo;s email address in CompanyCam. If the <code class="prettyprint">X-CompanyCam-User</code> header is not provided or the user cannot be found it will fallback to using the user that setup the integration.</p>
 
 <p><h2 id="pagination">Pagination</h2></p>
 
@@ -298,6 +241,11 @@ and &lsquo;page&rsquo; parameters on GET requests to index pages.</p>
 <td>15</td>
 <td>Can view and filter phots by a specific user</td>
 </tr>
+<tr>
+<td>Access Project Documents</td>
+<td>16</td>
+<td>Can view and upload documents at a project</td>
+</tr>
 </tbody></table>
 
 <h1 id="errors">Errors</h1>
@@ -343,6 +291,102 @@ and &lsquo;page&rsquo; parameters on GET requests to index pages.</p>
 <td>Internal Server Error &ndash; We had a problem with our server</td>
 </tr>
 </tbody></table>
+
+        <h1 id="authentication">Authentication</h1>
+
+<p>CompanyCam uses the OAuth 2.0 flow to authenticate users and generate access tokens for applications.</p>
+
+<p>The authorization code grant type is used to obtain both access tokens and refresh tokens and is optimized for confidential clients. Since this is a redirection-based flow, the client must be capable of interacting with the resource owner&rsquo;s user-agent (typically a web browser) and capable of receiving incoming requests (via redirection) from the authorization server.</p>
+
+<p>This request <strong>requires</strong> a <em>client id</em>, which you can get from your CompanyCam representative.</p>
+
+<h2 id="authorization-grant-step-1">Authorization Grant - Step 1</h2>
+
+<p>The first stage of generating an access token is to redirect the user to the CompanyCam authorization URI.</p>
+<pre class="highlight shell"><code><span class="c"># Example URL</span>
+https://app.companycam.com/oauth/authorize?client_id<span class="o">={</span>client_id<span class="o">}</span>&amp;redirect_uri<span class="o">={</span>authorized_redirect_uri<span class="o">}</span>&amp;response_type<span class="o">=</span>code&amp;scope<span class="o">=</span><span class="nb">read</span>+write+destroy
+</code></pre>
+
+<h3 id="request-parameters">Request parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>Your unique client identifier provided to you by CompanyCam</td>
+</tr>
+<tr>
+<td><strong>redirect_uri</strong></td>
+<td>The URI to redirect the user to after they authorize your application.</td>
+</tr>
+<tr>
+<td><strong>response_type</strong></td>
+<td>This must be set to <code class="prettyprint">code</code>. The <code class="prettyprint">redirect_uri</code> provided above will include a <code class="prettyprint">code</code> parameter used to obtain an access token in the next step.</td>
+</tr>
+</tbody></table>
+
+<h2 id="access-token-step-2">Access Token - Step 2</h2>
+
+<p>After the user has authorized your application they will be redirected to the <code class="prettyprint">redirect_uri</code> from step 1. The URI will contain a <code class="prettyprint">code</code> parameter that will be used to obtain an <code class="prettyprint">access_token</code> and <code class="prettyprint">refresh_token</code>.</p>
+<pre class="highlight shell"><code>curl -X POST --data <span class="s2">"client_id={client_id}&amp;client_secret={client_secret}&amp;code={code_from_uri}&amp;grant_type=authorization_code&amp;redirect_uri={authorized_redirect_uri}"</span> <span class="s2">"https://app.companycam.com/oauth/token"</span>
+
+<span class="c"># Example response</span>
+
+<span class="o">{</span>
+ <span class="s2">"access_token"</span>: <span class="s2">"de6780bc506a0446309bd9362820ba8aed28aa506c71eedbe1c5c4f9dd350e54"</span>,
+ <span class="s2">"token_type"</span>: <span class="s2">"bearer"</span>,
+ <span class="s2">"expires_in"</span>: 7200,
+ <span class="s2">"refresh_token"</span>: <span class="s2">"8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1"</span>
+<span class="o">}</span>
+</code></pre>
+
+<h3 id="request-parameters">Request parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>client_id</strong></td>
+<td>Your unique client identifier provided to you by CompanyCam</td>
+</tr>
+<tr>
+<td><strong>client_secret</strong></td>
+<td>Your secret key provided to you by CompanyCam</td>
+</tr>
+<tr>
+<td><strong>code</strong></td>
+<td>The value from the <code class="prettyprint">code</code> parameter that was included when the user was redirected to your application.</td>
+</tr>
+<tr>
+<td><strong>redirect_uri</strong></td>
+<td>The URI to used above when you initially redirected the user to CompanyCam.</td>
+</tr>
+</tbody></table>
+
+<h2 id="authenticating-api-calls">Authenticating API Calls</h2>
+
+<p>All subsequent calls to the CompanyCam API must include your application&rsquo;s secret key and the <code class="prettyprint">access_token</code> obtained previously for the user.</p>
+
+<blockquote>
+<p>An example API call looks like:</p>
+</blockquote>
+<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://api.companycam.com/v2/"</span>
+  -H <span class="s2">"Authorization: Bearer &lt;ACCESS_TOKEN&gt;"</span>
+  -H <span class="s2">"X-CompanyCam-Secret: &lt;SECRET_KEY&gt;"</span>
+</code></pre>
+
+<p>You can optionally pass the user&rsquo;s email address performing the action in your app in a header that looks like the following:
+<code class="prettyprint">X-CompanyCam-User: &lt;USER_EMAIL&gt;</code></p>
+
+<p>If the email address is not provided or the user cannot be found it will use the email address of the user that configured the integration.</p>
 
           <h1 id="company">Company</h1>
 
@@ -1449,7 +1493,7 @@ https://api.companycam.com/v2/photos/
 </tr>
 <tr>
 <td><strong>processing_status</strong></td>
-<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty all projects will be returned.</td>
+<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty <code class="prettyprint">processed</code> photos will be returned.</td>
 </tr>
 <tr>
 <td><strong>start_date</strong></td>
@@ -1766,7 +1810,7 @@ https://api.companycam.com/v2/projects/:project_id/photos/
 </tr>
 <tr>
 <td><strong>status</strong></td>
-<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty all projects will be returned.</td>
+<td>Either <code class="prettyprint">active</code> or <code class="prettyprint">deleted</code>. If empty <code class="prettyprint">active</code> photos will be returned.</td>
 </tr>
 <tr>
 <td><strong>start_date</strong></td>
