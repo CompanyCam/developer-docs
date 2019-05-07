@@ -1,0 +1,75 @@
+---
+en:
+  photo-tag:
+    current: false
+    skip_resource: true
+    resource_article: "a"
+    navigation_title: "Photo Tags"
+    use_title: true
+    resource_klass: "Tag"
+    resource_name: "tags"
+    resource_plural: "tags"
+    parent: "photo"
+    nested: true
+    parent_article: "a"
+    parent_plural: "photos"
+    disable_create: false
+    disable_update: true
+    disable_destroy: true
+    disable_show: true
+    show_id: "4782987471"
+    json: [
+      {
+        id: "48892885",
+        company_id: "8292212",
+        display_value: "Front Side",
+        value: "front size",
+        created_at: 1152230608,
+        updated_at: 1152230400
+      }
+    ]
+    gecko:
+      create:
+        - 4782987471
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "String",
+        description: "A unique identifier for the Tag.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "String",
+        description: "A unique identifier for the Company the Tag belongs to.",
+        readonly: true
+      },
+      display_value: {
+        name: "display_value",
+        type: "String",
+        description: "The display value of the Tag. Used to display to the user",
+        creatable: true,
+        required: true,
+        updatable: true,
+        readonly: false
+      },
+      value: {
+        name: "value",
+        type: "String",
+        description: "The lowercase version of the `display_value`. This is useful for searching and sorting.",
+        readonly: true
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Tag was created on the server.",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Tag was last update.",
+        readonly: true
+      }
+    }
