@@ -932,6 +932,12 @@ https://api.companycam.com/v2/users/current
 <td>true</td>
 </tr>
 <tr>
+<td><strong>integrations</strong></td>
+<td>Array[<a href="/#the-projectintegration-object">ProjectIntegration</a>]</td>
+<td>A list of integrations associated with the project.</td>
+<td>true</td>
+</tr>
+<tr>
 <td><strong>slug</strong></td>
 <td>String</td>
 <td>A unique identifier use the Project that is used to construct some public URLs.</td>
@@ -1005,6 +1011,12 @@ https://api.companycam.com/v2/projects/
     </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;embedded_project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="nt">&quot;integrations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ContractorsCloud&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nt">&quot;relation_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
     </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="p">,</span><span class="w">
@@ -1090,6 +1102,12 @@ https://api.companycam.com/v2/projects/ -d <span class="s1">&#39;{&quot;project&
   </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;embedded_project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;integrations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ContractorsCloud&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;relation_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="p">,</span><span class="w">
@@ -1180,6 +1198,12 @@ https://api.companycam.com/v2/projects/94772883
   </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;embedded_project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;integrations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ContractorsCloud&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;relation_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="p">,</span><span class="w">
@@ -1301,6 +1325,12 @@ https://api.companycam.com/v2/projects/94772883/restore
   </span><span class="nt">&quot;project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/projects/1234&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;embedded_project_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QrL2XjgF8P2dN6MPDRdV2Q&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nt">&quot;integrations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ContractorsCloud&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nt">&quot;relation_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;geofence&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1152230400</span><span class="p">,</span><span class="w">
@@ -2809,6 +2839,27 @@ https://api.companycam.com/v2/tags/48892885
 <td><strong>uri</strong></td>
 <td>String</td>
 <td>The full URI of the photo</td>
+</tr>
+</tbody></table>
+
+<p><h2 id="the-projectintegration-object">The ProjectIntegration object</h2></p>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>type</strong></td>
+<td>String</td>
+<td>The name of the integration`</td>
+</tr>
+<tr>
+<td><strong>relation_id</strong></td>
+<td>String</td>
+<td>The record id provided by the integration</td>
 </tr>
 </tbody></table>
 
