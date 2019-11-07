@@ -54,6 +54,9 @@ en:
         project_url: "https://app.companycam.com/projects/1234",
         embedded_project_url: "https://app.companycam.com/embed/projects/QrL2XjgF8P2dN6MPDRdV2Q",
         slug: "QrL2XjgF8P2dN6MPDRdV2Q",
+        integrations: [
+          { type: 'ContractorsCloud', relation_id: '1234' }
+        ],
         public: false,
         geofence: null,
         created_at: 1152230400,
@@ -154,6 +157,12 @@ en:
         name: "embedded_project_url",
         type: "String",
         description: "The link to an embeddable photo feed for the project.",
+        readonly: true
+      },
+      integrations: {
+        name: "integrations",
+        type: "Array[[ProjectIntegration](/#the-projectintegration-object)]",
+        description: "A list of integrations associated with the project.",
         readonly: true
       },
       slug: {

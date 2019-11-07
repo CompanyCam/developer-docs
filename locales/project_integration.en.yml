@@ -1,0 +1,19 @@
+---
+en:
+  project_integration:
+    type_article: "a"
+    type_klass: "ProjectIntegration"
+    type_name: "project_integration"
+    type_plural: "project_integrations"
+    attributes: {
+      type: {
+        name: "type",
+        type: "String",
+        description: "The name of the integration`"
+      },
+      relation_id: {
+        name: "relation_id",
+        type: "String",
+        description: "The record id provided by the integration"
+      }
+    }
