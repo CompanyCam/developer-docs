@@ -1,0 +1,78 @@
+---
+en:
+  webhook:
+    current: false
+    resource_article: "a"
+    resource_klass: "Webhook"
+    resource_name: "webhook"
+    resource_plural: "webhooks"
+    nested: false
+    disable_create: false
+    show_id: "42"
+    json: [
+      {
+        id: "42",
+        company_id: "8675309",
+        url: "https://sweet-webhooks.com/my/webhook/endpoint",
+        scopes: ["*"],
+        enabled: "true",
+        created_at: 1605802117,
+        updated_at: 1605802224
+      }
+    ]
+    gecko:
+      update: {
+        url: "https://savory-webhooks.com/some/other/endpoint",
+        scopes: ["project.*"],
+      }
+      create: {
+        url: "https://sweet-webhooks.com/my/webhook/endpoint",
+        scopes: ["*"],
+        enabled: "true",
+      }
+
+    attributes: {
+      id: {
+        name: "id",
+        type: "String",
+        description: "A unique identifier for the Webhook.",
+        readonly: true
+      },
+      company_id: {
+        name: "company_id",
+        type: "String",
+        description: "A unique identifier for the Company the Webhook belongs to.",
+        readonly: true,
+      },
+      url: {
+        name: "url",
+        type: "String",
+        description: "The URL that the Webhook will target.",
+        readonly: false
+      },
+      scopes: {
+        name: "scopes",
+        type: "Array[String]",
+        description: "An array of strings specifying which Webhook events to subscribe to.  This includes support for wildcards for all events ('*'), wildcards for namespaces ('project.*', 'company.*'), and specific events ('project.created').",
+        readonly: false
+      },
+      enabled: {
+        name: "enabled",
+        type: "Boolean",
+        description: "Enabled/disabled status of the Webhook.",
+        readonly: false
+      },
+      created_at: {
+        name: "created_at",
+        type: "Integer",
+        description: "Timestamp when the Webhook was created",
+        readonly: true
+      },
+      updated_at: {
+        name: "updated_at",
+        type: "Integer",
+        description: "Timestamp when the Webhook was last updated",
+        readonly: true
+      }
+    }
+
