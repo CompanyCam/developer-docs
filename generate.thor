@@ -60,7 +60,7 @@ en:
   end
 
   def attributes
-    keys = [:url, :scopes, :enabled, :token] - [:id, :created_at, :updated_at]
+    keys = json.first.keys - [:id, :created_at, :updated_at]
     hash = {}
     keys.each do |key|
       hash[key] = {
